@@ -1,0 +1,42 @@
+..\obj\inductance.o: ..\SRC\SMARTCAR\src\inductance.c
+..\obj\inductance.o: ..\SRC\SMARTCAR\inc\inductance.h
+..\obj\inductance.o: ..\SRC\USER\inc\headfile.h
+..\obj\inductance.o: ..\SRC\HARDWARE\inc\port_cfg.h
+..\obj\inductance.o: ..\SRC\HARDWARE\inc\common.h
+..\obj\inductance.o: ..\SRC\STARTUP\DeviceSupport\MK66F18.h
+..\obj\inductance.o: ..\SRC\STARTUP\CoreSupport\core_cm4.h
+..\obj\inductance.o: D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\inductance.o: ..\SRC\STARTUP\CoreSupport\core_cmInstr.h
+..\obj\inductance.o: ..\SRC\STARTUP\CoreSupport\core_cmFunc.h
+..\obj\inductance.o: ..\SRC\STARTUP\CoreSupport\core_cm4_simd.h
+..\obj\inductance.o: ..\SRC\STARTUP\DeviceSupport\system_MK66.h
+..\obj\inductance.o: ..\SRC\HARDWARE\inc\uart.h
+..\obj\inductance.o: ..\SRC\HARDWARE\inc\misc.h
+..\obj\inductance.o: ..\SRC\HARDWARE\inc\common.h
+..\obj\inductance.o: ..\SRC\HARDWARE\inc\port.h
+..\obj\inductance.o: ..\SRC\HARDWARE\inc\gpio.h
+..\obj\inductance.o: ..\SRC\HARDWARE\inc\port_cfg.h
+..\obj\inductance.o: D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\inductance.o: ..\SRC\HARDWARE\inc\rtc.h
+..\obj\inductance.o: D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\inductance.o: ..\SRC\HARDWARE\inc\systick.h
+..\obj\inductance.o: ..\SRC\HARDWARE\inc\pit.h
+..\obj\inductance.o: ..\SRC\HARDWARE\inc\lptmr.h
+..\obj\inductance.o: ..\SRC\HARDWARE\inc\ftm.h
+..\obj\inductance.o: ..\SRC\HARDWARE\inc\adc.h
+..\obj\inductance.o: ..\SRC\HARDWARE\inc\dac.h
+..\obj\inductance.o: ..\SRC\HARDWARE\inc\flash.h
+..\obj\inductance.o: ..\SRC\HARDWARE\inc\wdog.h
+..\obj\inductance.o: ..\SRC\HARDWARE\inc\dma.h
+..\obj\inductance.o: ..\SRC\HARDWARE\inc\cmt.h
+..\obj\inductance.o: ..\SRC\USER\inc\isr.h
+..\obj\inductance.o: ..\SRC\USER\inc\headfile.h
+..\obj\inductance.o: ..\SRC\SMARTCAR\inc\smartcar_init.h
+..\obj\inductance.o: ..\SRC\SMARTCAR\inc\servo.h
+..\obj\inductance.o: ..\SRC\SMARTCAR\inc\motor.h
+..\obj\inductance.o: ..\SRC\SMARTCAR\inc\control.h
+..\obj\inductance.o: ..\SRC\HARDWARE\inc\dmacnt.h
+..\obj\inductance.o: ..\SRC\SMARTCAR\inc\inductance.h
+..\obj\inductance.o: ..\SRC\SMARTCAR\inc\encoder.h
+..\obj\inductance.o: ..\SRC\SMARTCAR\inc\Segmented_pid.h
+..\obj\inductance.o: ..\SRC\SMARTCAR\inc\key.h

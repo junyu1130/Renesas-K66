@@ -1,0 +1,41 @@
+..\obj\dma_old.o: ..\SRC\HARDWARE\src\dma_old.c
+..\obj\dma_old.o: ..\SRC\HARDWARE\inc\dma_old.h
+..\obj\dma_old.o: ..\SRC\USER\inc\headfile.h
+..\obj\dma_old.o: ..\SRC\HARDWARE\inc\port_cfg.h
+..\obj\dma_old.o: ..\SRC\HARDWARE\inc\common.h
+..\obj\dma_old.o: ..\SRC\STARTUP\DeviceSupport\MK66F18.h
+..\obj\dma_old.o: ..\SRC\STARTUP\CoreSupport\core_cm4.h
+..\obj\dma_old.o: D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\dma_old.o: ..\SRC\STARTUP\CoreSupport\core_cmInstr.h
+..\obj\dma_old.o: ..\SRC\STARTUP\CoreSupport\core_cmFunc.h
+..\obj\dma_old.o: ..\SRC\STARTUP\CoreSupport\core_cm4_simd.h
+..\obj\dma_old.o: ..\SRC\STARTUP\DeviceSupport\system_MK66.h
+..\obj\dma_old.o: ..\SRC\HARDWARE\inc\uart.h
+..\obj\dma_old.o: ..\SRC\HARDWARE\inc\misc.h
+..\obj\dma_old.o: ..\SRC\HARDWARE\inc\common.h
+..\obj\dma_old.o: ..\SRC\HARDWARE\inc\port.h
+..\obj\dma_old.o: ..\SRC\HARDWARE\inc\gpio.h
+..\obj\dma_old.o: ..\SRC\HARDWARE\inc\port_cfg.h
+..\obj\dma_old.o: D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\dma_old.o: ..\SRC\HARDWARE\inc\rtc.h
+..\obj\dma_old.o: D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\dma_old.o: ..\SRC\HARDWARE\inc\systick.h
+..\obj\dma_old.o: ..\SRC\HARDWARE\inc\pit.h
+..\obj\dma_old.o: ..\SRC\HARDWARE\inc\lptmr.h
+..\obj\dma_old.o: ..\SRC\HARDWARE\inc\ftm.h
+..\obj\dma_old.o: ..\SRC\HARDWARE\inc\adc.h
+..\obj\dma_old.o: ..\SRC\HARDWARE\inc\dac.h
+..\obj\dma_old.o: ..\SRC\HARDWARE\inc\flash.h
+..\obj\dma_old.o: ..\SRC\HARDWARE\inc\wdog.h
+..\obj\dma_old.o: ..\SRC\HARDWARE\inc\dma.h
+..\obj\dma_old.o: ..\SRC\HARDWARE\inc\cmt.h
+..\obj\dma_old.o: ..\SRC\USER\inc\isr.h
+..\obj\dma_old.o: ..\SRC\USER\inc\headfile.h
+..\obj\dma_old.o: ..\SRC\SMARTCAR\inc\smartcar_init.h
+..\obj\dma_old.o: ..\SRC\SMARTCAR\inc\servo.h
+..\obj\dma_old.o: ..\SRC\SMARTCAR\inc\motor.h
+..\obj\dma_old.o: ..\SRC\SMARTCAR\inc\control.h
+..\obj\dma_old.o: ..\SRC\HARDWARE\inc\dmacnt.h
+..\obj\dma_old.o: ..\SRC\SMARTCAR\inc\encoder.h
+..\obj\dma_old.o: ..\SRC\SMARTCAR\inc\Segmented_pid.h
+..\obj\dma_old.o: ..\SRC\SMARTCAR\inc\buzzer.h

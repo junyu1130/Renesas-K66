@@ -1,0 +1,335 @@
+#include "TrackType.h"
+
+InflectionPoint  InflectionPointL;//建立左边拐点结构体变量
+InflectionPoint  InflectionPointR;//建立右边拐点结构体变量
+
+#define TestInflectionPointL  1//此宏定义置1，就可以对左边最近拐点进行测试
+#define TestInflectionPointR  1//此宏定义置1，就可以对右边最近拐点进行测试
+
+CrossType Cross;//建立十字结构体变量
+
+//十字用到的变量
+#if ClossRecognition
+//竖向扫描，记录行坐标的数组
+unsigned char LeftScanCol[COL];
+unsigned char RightScanCol[COL];
+unsigned char StrightIntoCrossL;//直入十字，存在左拐点的标志位
+unsigned char StrightIntoCrossR;//直入十字，存在右拐点的标志
+unsigned char StrightIntoCrossLR;//直入十字，存在左右拐点的标志位
+unsigned char StrightIntoCrossNotLR;//直入十字，不存在右拐点的标志位
+#endif
+
+//对右边线进行操作，如果存在多个拐点寻找最近的拐点
+//prt:传入一个结构体变量的地址
+//Start：扫描的起始行
+//End ：扫描的结束行
+void FindInflectionPointR(InflectionPoint *prt,unsigned char Start,unsigned char End )
+{
+    int i;
+    //初始化结构体变量
+    prt->ScanInflectionPointStart=Start;//设置扫描的起始行
+    prt->ScanInflectionPointEnd=End;//设置扫描的结束行
+    prt->InflectionPointRow=0;
+    prt->InflectionPointCol=0;
+    prt->InflectionPointFlag=0;
+
+    for(i=prt->ScanInflectionPointStart; i>=prt->ScanInflectionPointEnd; i--) //不能扫描太远，否则会误判
+    {
+        if((RightEdge[i]!=COL&&RightEdge[i-1]!=COL&&RightEdge[i+1]!=COL&&RightEdge[i-2]!=COL)
+                &&(RightEdge[i]>10&&RightEdge[i-1]>10&&RightEdge[i+1]>10&&RightEdge[i-2]>10)) //连续四行不丢线,并为了防止跳变，这4行的边界必须大于10
+        {
+            if((RightEdge[i]-RightEdge[i+1]<=0)&&(RightEdge[i-1]-RightEdge[i])>=1&&(RightEdge[i-2]-RightEdge[i])>=2)//找到右边线有拐点
+            {
+                prt->InflectionPointRow=i;//记录拐点的行
+                prt->InflectionPointCol=RightEdge[i];//记录拐点的列
+                prt->InflectionPointFlag=1;//标记找到右拐点
+                break;//退出for
+            }
+
+        }
+
+        //避免波动，多考虑一种情况:本行丢线，前面连续两行和后面连续两行都不丢线，并且不丢线的都大于10
+        else if((RightEdge[i]==COL&&RightEdge[i-1]!=COL&&RightEdge[i+1]!=COL&&RightEdge[i-2]!=COL&&RightEdge[i+2]!=COL)
+                &&(RightEdge[i]>10&&RightEdge[i-1]>10&&RightEdge[i+1]>10&&RightEdge[i-2]>10&&RightEdge[i+2]>10))
+        {
+            prt->InflectionPointRow=i;//记录拐点的行
+            prt->InflectionPointCol=RightEdge[i];//记录拐点的列
+            prt->InflectionPointFlag=1;//标记找到右拐点
+            break;//退出for
+        }
+    }
+
+}
+
+//对左边线进行操作，如果存在多个拐点寻找最近的拐点
+//prt:传入一个结构体变量的地址
+//Start：扫描的起始行
+//End ：扫描的结束行
+void FindInflectionPointL(InflectionPoint *prt,unsigned char Start,unsigned char End )
+{
+
+    int i;
+    //初始化结构体变量
+    prt->ScanInflectionPointStart=Start;//设置扫描的起始行
+    prt->ScanInflectionPointEnd=End;//设置扫描的结束行
+    prt->InflectionPointRow=0;
+    prt->InflectionPointCol=0;
+    prt->InflectionPointFlag=0;
+
+    //左拐点
+    for(i= prt->ScanInflectionPointStart; i>prt->ScanInflectionPointEnd; i--)
+    {
+        if(LeftEdge[i]!=0&&LeftEdge[i-1]!=0&&LeftEdge[i+1]!=0&&LeftEdge[i-2]!=0  //连续4行不丢线，并且这4行都小于177
+                &&LeftEdge[i]<COL-11&&LeftEdge[i-1]<COL-11&&LeftEdge[i+1]<COL-11&&LeftEdge[i-2]<COL-11)
+        {
+
+            if((LeftEdge[i]-LeftEdge[i+1]>=0)&&(LeftEdge[i-1]-LeftEdge[i]<=-1)&&(LeftEdge[i-2]-LeftEdge[i]<=-2))//找到拐点
+            {
+                prt->InflectionPointRow=i;//记录该拐点的行
+                prt->InflectionPointCol=LeftEdge[i];//记录该拐点的列
+                prt->InflectionPointFlag=1;//标记找到左拐点
+                break;//找到退出
+            }
+        }
+
+        //避免波动，多考虑一种情况:本行丢线，前面连续两行和后面连续两行都不丢线，并且不丢线的都小于177
+        else if(LeftEdge[i]==0&&LeftEdge[i-1]!=0&&LeftEdge[i+1]!=0&&LeftEdge[i-2]!=0&&LeftEdge[i+2]!=0
+                &&LeftEdge[i]<COL-11&&LeftEdge[i-1]<COL-11&&LeftEdge[i+1]<177&&LeftEdge[i-2]<COL-11&&LeftEdge[i+2]<COL-11)
+        {
+
+            prt->InflectionPointRow=i;//记录该拐点的行
+            prt->InflectionPointCol=LeftEdge[i];//记录该拐点的列
+            prt->InflectionPointFlag=1;//标记找到左拐点
+            break;//找到退出
+
+        }
+
+    }
+
+
+}
+
+
+
+#if ClossRecognition
+
+void CrossRecognition(CrossType *prt)
+{
+    int i,j,ScanEndCol;
+
+    //初始化变量
+    prt->StrightInto=0;
+    prt->RightSideling=0;
+    prt->LeftSideling=0;
+    prt->CrossFlag=0;
+
+    //寻找左右拐点
+    FindInflectionPointR(&InflectionPointR,ROW-4,25);
+    FindInflectionPointL(&InflectionPointL,ROW-4,25);
+
+    //如果左边界和右边界同时丢线大于5行，就认为遇到了十字
+    if(AllLose>=7&&LastLine<25)
+    {
+        prt->StrightInto=1;//直入十字
+    }
+    //判断右斜入十字情况
+    else if(InflectionPointR.InflectionPointFlag //存在右边拐点
+            &&InflectionPointL.InflectionPointFlag==0//并且不存在左边拐点
+            &&InflectionPointR.InflectionPointRow<=55
+            &&((BlackEndLL>=BlackEndM)||BlackEndML>=BlackEndM))//并且右拐点的离车体较远
+    {
+
+        for(i=0; i<COL-1; i++)
+        {
+            RightScanCol[i]=0;//初始化数组
+        }
+        //选择最远的那一列
+        if(BlackEndM>=BlackEndML&&BlackEndM>=BlackEndLL)//中间的视野最远
+        {
+            ScanEndCol=COL/2;
+        }
+        else if(BlackEndML>BlackEndM&&BlackEndML>BlackEndLL)//中间偏左视野最远
+        {
+            ScanEndCol=COL*3/8;
+        }
+
+        else if(BlackEndLL>BlackEndM&&BlackEndLL>BlackEndML)//最左视野最远
+        {
+            ScanEndCol=COL/4;
+        }
+
+        //以右拐点的列作为基准，视野最远的一列最为结束，从右往左竖向扫描
+        //寻找十字上面的直角
+        for(j=InflectionPointR.InflectionPointCol; j>ScanEndCol; j--)
+        {
+            //以拐点的行为起始基准，最远列的行作为结束行
+            for(i=InflectionPointR.InflectionPointRow; i>DropRow; i--)
+            {
+                if(bin_image[i][j]==WHITE&&bin_image[i-1][j]==BLACK&&bin_image[i-2][j]==BLACK)
+                {
+                    RightScanCol[j]=i-1;
+                    break;
+                }
+            }
+        }
+        for(j=InflectionPointR.InflectionPointCol; j>ScanEndCol; j--)
+        {
+            if(RightScanCol[j]!=0&&RightScanCol[j-1]!=0&&RightScanCol[j+1]!=0)
+                if(RightScanCol[j]-RightScanCol[j+1]>=0&&RightScanCol[j]-RightScanCol[j-1]<0)
+                {
+                    prt->RightSideling=1;
+                }
+        }
+    }
+    
+    //判断左斜入十字情况
+    else if(InflectionPointR.InflectionPointFlag==0 //存在左边拐点
+            &&InflectionPointL.InflectionPointFlag//并且不存在右边拐点
+            &&InflectionPointL.InflectionPointRow<=55
+            &&((BlackEndRR>=BlackEndM)||BlackEndMR>=BlackEndM))//并且左拐点的离车体较远
+    {
+        for(i=0; i<COL-1; i++)
+        {
+            LeftScanCol[i]=0;//初始化数组
+        }
+
+        //选择最远的那一列
+        if(BlackEndM>=BlackEndMR&&BlackEndM>=BlackEndRR)
+        {
+            ScanEndCol=COL/2;
+        }
+        else if(BlackEndMR>BlackEndM&&BlackEndMR>BlackEndRR)
+        {
+            ScanEndCol=COL*5/8;
+        }
+
+        else if(BlackEndRR>BlackEndM&&BlackEndRR>BlackEndMR)
+        {
+            ScanEndCol=COL*3/4;
+        }
+
+        for(j=InflectionPointL.InflectionPointCol; j<ScanEndCol; j++)
+        {
+            //以拐点的行为起始基准，最远列的行作为结束行
+            for(i=InflectionPointL.InflectionPointRow; i>DropRow; i--)
+            {
+                if(bin_image[i][j]==WHITE&&bin_image[i-1][j]==BLACK&&bin_image[i-2][j]==BLACK)
+                {
+                    LeftScanCol[j]=i-1;
+                    break;
+                }
+            }
+        }
+        for(j=InflectionPointL.InflectionPointCol; j<ScanEndCol; j++)
+        {
+            if(LeftScanCol[j]!=0&&LeftScanCol[j-1]!=0&&LeftScanCol[j+1]!=0)
+                if(LeftScanCol[j]-LeftScanCol[j+1]<=0&&LeftScanCol[j]-LeftScanCol[j-1]>0)
+                {
+                    prt->LeftSideling=1;//标志左斜入十字
+                }
+        }
+    }
+}
+
+//对十字进行处理，得出舵机的控制中线
+//经测试，此方法可以达到十字控制要求，基本不存在抖动情况
+void CrossConduct(void)
+{
+    int i;
+    //初始化变量
+    StrightIntoCrossL=0;
+    StrightIntoCrossR=0;
+    StrightIntoCrossLR=0;
+    StrightIntoCrossNotLR=0;
+    //直入十字可以分为两种情况 ：1.底部的线还存在，2.底部丢线
+    if(Cross.StrightInto)
+    {
+        //底部4行有一边不丢线
+        if((LeftEdge[61]!=0&&LeftEdge[60]!=0&&LeftEdge[59]!=0&&LeftEdge[58]!=0)
+                ||(RightEdge[61]!=COL-1&&RightEdge[60]!=COL-1&&RightEdge[59]!=COL-1&&RightEdge[58]!=COL-1))
+        {
+
+            if(InflectionPointL.InflectionPointFlag&&InflectionPointR.InflectionPointFlag==0)
+            {
+                StrightIntoCrossL=1;
+            }
+            //存在左拐点，不存右拐点
+            else if(InflectionPointL.InflectionPointFlag==0&&InflectionPointR.InflectionPointFlag)
+            {
+                StrightIntoCrossR=1;
+            }
+            //存在左拐点，存在右拐点
+            else if(InflectionPointL.InflectionPointFlag&&InflectionPointR.InflectionPointFlag)
+            {
+                StrightIntoCrossLR=1;
+            }
+            else
+            {
+                //平滑中线
+                for(i=60; i>LastLine; i--)
+                {
+                    if(ABS(MiddleLine[i]-MiddleLine[i-1])>2)
+                    {
+                        MiddleLine[i]=MiddleLine[i+1];
+                    }
+                }
+            }
+
+        }
+
+        else
+        {
+            Cross.CrossFlag=1;//这种情况直接取后面的
+        }
+    }
+
+}
+
+#endif
+
+/*********define for CrossConduct**********/
+unsigned char  CrossFlag  = 0;//十字标志
+unsigned char  LastCrossFlag  = 0;
+unsigned char  LastLastCrossFlag  = 0;
+unsigned char  CrossNumberFalg=0;
+unsigned char  CloseLoopFlag=0;
+
+//对十字进行识别和进行特殊处理      
+void NormalCrossConduct(void)
+{       
+     unsigned char i;
+ 
+     LastLastCrossFlag=LastCrossFlag;//记录上上次是否是十字
+     LastCrossFlag=CrossFlag;//记录上一次是否是十字
+     CrossFlag=0;//清零
+     
+     
+    if((AllLose>=15))//左右同时丢线 
+    {
+         CrossFlag=1;//标记十字    
+    }
+    if(CrossFlag)     
+    { 
+       if((BlackEndM>=BlackEndL)&&(BlackEndM>=BlackEndR))//中间白线最多 
+       {
+         for(i=61;i>20;i--)     
+         {
+            MiddleLine[i]=COL/2;//直走    
+         }   
+       }            
+       else if((BlackEndL>BlackEndM)&&(BlackEndL>BlackEndR))//看到左边白的最多，车体偏右了，往左跑  
+       {
+          for(i=61;i>20;i--)    
+          {        
+            MiddleLine[i]=COL*3/8; 
+          }  
+       }          
+       else if((BlackEndR>BlackEndM)&&(BlackEndR>BlackEndL))//看到右边白的最多，车体偏左了，往右跑
+       {
+          for(i=61;i>20;i--)     
+          { 
+            MiddleLine[i]=COL*5/8;    
+          }  
+       }
+    }
+}

@@ -1,0 +1,1374 @@
+Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+
+==============================================================================
+
+Section Cross References
+
+    startup_mk66f18.o(RESET) refers to startup_mk66f18.o(STACK) for __initial_sp
+    startup_mk66f18.o(RESET) refers to startup_mk66f18.o(.text) for Reset_Handler
+    startup_mk66f18.o(RESET) refers to isr.o(i.DMA0_IRQHandler) for DMA0_IRQHandler
+    startup_mk66f18.o(RESET) refers to isr.o(i.UART0_RX_TX_IRQHandler) for UART0_RX_TX_IRQHandler
+    startup_mk66f18.o(RESET) refers to isr.o(i.UART3_RX_TX_IRQHandler) for UART3_RX_TX_IRQHandler
+    startup_mk66f18.o(RESET) refers to isr.o(i.PIT0_IRQHandler) for PIT0_IRQHandler
+    startup_mk66f18.o(RESET) refers to isr.o(i.PIT1_IRQHandler) for PIT1_IRQHandler
+    startup_mk66f18.o(RESET) refers to isr.o(i.PIT2_IRQHandler) for PIT2_IRQHandler
+    startup_mk66f18.o(RESET) refers to isr.o(i.PORTC_IRQHandler) for PORTC_IRQHandler
+    startup_mk66f18.o(RESET) refers to isr.o(i.PORTE_IRQHandler) for PORTE_IRQHandler
+    startup_mk66f18.o(RESET) refers to isr.o(i.UART4_RX_TX_IRQHandler) for UART4_RX_TX_IRQHandler
+    startup_mk66f18.o(.text) refers to system_mk66.o(i.Start) for Start
+    startup_mk66f18.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    system_mk66.o(i.SYSTEM_CLK) refers to system_mk66.o(i.div_set) for div_set
+    system_mk66.o(i.Start) refers to system_mk66.o(i.Disable_Wdog) for Disable_Wdog
+    system_mk66.o(i.Start) refers to system_mk66.o(i.SYSTEM_CLK) for SYSTEM_CLK
+    system_mk66.o(i.Start) refers to gpio.o(i.gpio_init) for gpio_init
+    motor.o(i.Motor_Control) refers to motor.o(i.Motor_stop) for Motor_stop
+    motor.o(i.Motor_Control) refers to ftm.o(i.ftm_pwm_duty) for ftm_pwm_duty
+    motor.o(i.Motor_Control) refers to motor.o(.data) for motor_left_speed_u
+    motor.o(i.Motor_Init) refers to ftm.o(i.ftm_pwm_init) for ftm_pwm_init
+    motor.o(i.Motor_Init) refers to motor.o(.data) for motor_LU
+    motor.o(i.Motor_stop) refers to ftm.o(i.ftm_pwm_duty) for ftm_pwm_duty
+    motor.o(i.Motor_stop) refers to motor.o(.data) for motor_right_speed_u
+    servo.o(i.CalculateError) refers to servo.o(.data) for CenterSum
+    servo.o(i.CalculateError) refers to findtrack.o(.bss) for MiddleLine
+    servo.o(i.Server_Control) refers to ftm.o(i.ftm_pwm_duty) for ftm_pwm_duty
+    servo.o(i.Server_Control) refers to servo.o(.data) for servo_Max
+    servo.o(i.Servo_Init) refers to ftm.o(i.ftm_pwm_init) for ftm_pwm_init
+    servo.o(i.Servo_Init) refers to servo.o(.data) for servo_Mid
+    servo.o(i.Servo_test) refers to ftm.o(i.ftm_pwm_duty) for ftm_pwm_duty
+    servo.o(i.Servo_test) refers to systick.o(i.systick_delay_ms) for systick_delay_ms
+    servo.o(i.Servo_test) refers to servo.o(.data) for servo_Min
+    servo.o(i.servoControl) refers to servo.o(i.CalculateError) for CalculateError
+    servo.o(i.servoControl) refers to f2d.o(.text) for __aeabi_f2d
+    servo.o(i.servoControl) refers to dfltui.o(.text) for __aeabi_ui2d
+    servo.o(i.servoControl) refers to ddiv.o(.text) for __aeabi_ddiv
+    servo.o(i.servoControl) refers to dmul.o(.text) for __aeabi_dmul
+    servo.o(i.servoControl) refers to dadd.o(.text) for __aeabi_dadd
+    servo.o(i.servoControl) refers to d2f.o(.text) for __aeabi_d2f
+    servo.o(i.servoControl) refers to ftm.o(i.ftm_pwm_duty) for ftm_pwm_duty
+    servo.o(i.servoControl) refers to tracktype.o(.data) for turn_flag
+    servo.o(i.servoControl) refers to servo.o(.data) for servoError
+    encoder.o(i.Encoder_Init) refers to dmacnt.o(i.DMACNT_Init) for DMACNT_Init
+    encoder.o(i.Encoder_Init) refers to gpio.o(i.gpio_init) for gpio_init
+    encoder.o(i.SpeedGet) refers to dmacnt.o(i.DMACNT_GetValue) for DMACNT_GetValue
+    encoder.o(i.SpeedGet) refers to encoder.o(.data) for Speed_Left
+    encoder.o(i.SpeedGet) refers to smartcar_init.o(.data) for pid_speed_L
+    smartcar_init.o(i.car_communication_init) refers to nrf2401.o(i.NRF2401_Init) for NRF2401_Init
+    smartcar_init.o(i.car_communication_init) refers to oled.o(i.OLED_P6x8Str) for OLED_P6x8Str
+    smartcar_init.o(i.car_communication_init) refers to nrf2401.o(i.NRF2401_SetRXMode) for NRF2401_SetRXMode
+    smartcar_init.o(i.car_init) refers to buzzer.o(i.buzzer_Init) for buzzer_Init
+    smartcar_init.o(i.car_init) refers to buzzer.o(i.buzzer_Ring) for buzzer_Ring
+    smartcar_init.o(i.car_init) refers to smartcar_init.o(i.motorSet) for motorSet
+    smartcar_init.o(i.car_init) refers to servo.o(i.Servo_Init) for Servo_Init
+    smartcar_init.o(i.car_init) refers to motor.o(i.Motor_Init) for Motor_Init
+    smartcar_init.o(i.car_init) refers to encoder.o(i.Encoder_Init) for Encoder_Init
+    smartcar_init.o(i.car_init) refers to key.o(i.Key_Init) for Key_Init
+    smartcar_init.o(i.car_init) refers to dflti.o(.text) for __aeabi_i2d
+    smartcar_init.o(i.car_init) refers to ddiv.o(.text) for __aeabi_ddiv
+    smartcar_init.o(i.car_init) refers to d2f.o(.text) for __aeabi_d2f
+    smartcar_init.o(i.car_init) refers to control.o(i.PID_init) for PID_init
+    smartcar_init.o(i.car_init) refers to smartcar_init.o(i.car_interrupt_init) for car_interrupt_init
+    smartcar_init.o(i.car_init) refers to oled.o(i.OLED_Init) for OLED_Init
+    smartcar_init.o(i.car_init) refers to oled.o(i.OLED_P6x8Str) for OLED_P6x8Str
+    smartcar_init.o(i.car_init) refers to smartcar_init.o(i.car_communication_init) for car_communication_init
+    smartcar_init.o(i.car_init) refers to mt9v032.o(i.camera_init) for camera_init
+    smartcar_init.o(i.car_init) refers to hc_sr04.o(i.HC_SR04_Init) for HC_SR04_Init
+    smartcar_init.o(i.car_init) refers to smartcar_init.o(.data) for speed_d
+    smartcar_init.o(i.car_interrupt_init) refers to pit.o(i.pit_init) for pit_init
+    smartcar_init.o(i.car_interrupt_init) refers to common.o(.data) for bus_clk_mhz
+    smartcar_init.o(i.motorSet) refers to motor.o(.data) for motor_LU
+    smartcar_init.o(.data) refers to smartcar_init.o(.bss) for speed_R
+    buzzer.o(i.buzzer_Init) refers to gpio.o(i.gpio_init) for gpio_init
+    buzzer.o(i.buzzer_Ring) refers to systick.o(i.systick_delay_ms) for systick_delay_ms
+    key.o(i.Key_Check) refers to systick.o(i.systick_delay_ms) for systick_delay_ms
+    key.o(i.Key_Init) refers to gpio.o(i.gpio_init) for gpio_init
+    nrf2401.o(i.NRF2401_Init) refers to gpio.o(i.gpio_init) for gpio_init
+    nrf2401.o(i.NRF2401_Init) refers to nrf2401.o(i.NVIC_DisableIRQ) for NVIC_DisableIRQ
+    nrf2401.o(i.NRF2401_Init) refers to port.o(i.port_init) for port_init
+    nrf2401.o(i.NRF2401_Init) refers to nrf2401.o(i.NRF24L01_Check) for NRF24L01_Check
+    nrf2401.o(i.NRF2401_ReadBuffer) refers to nrf2401.o(i.NRF2401_ReadWriteByte) for NRF2401_ReadWriteByte
+    nrf2401.o(i.NRF2401_ReadWriteReg) refers to nrf2401.o(i.NRF2401_ReadWriteByte) for NRF2401_ReadWriteByte
+    nrf2401.o(i.NRF2401_RecData) refers to nrf2401.o(i.NRF2401_ReadWriteReg) for NRF2401_ReadWriteReg
+    nrf2401.o(i.NRF2401_RecData) refers to nrf2401.o(i.NRF2401_ReadBuffer) for NRF2401_ReadBuffer
+    nrf2401.o(i.NRF2401_SendData) refers to nrf2401.o(i.NRF2401_WriteBuffer) for NRF2401_WriteBuffer
+    nrf2401.o(i.NRF2401_SendData) refers to nrf2401.o(i.NRF2401_ReadWriteReg) for NRF2401_ReadWriteReg
+    nrf2401.o(i.NRF2401_SendData_Duplex) refers to nrf2401.o(i.NRF2401_SetTXMode) for NRF2401_SetTXMode
+    nrf2401.o(i.NRF2401_SendData_Duplex) refers to nrf2401.o(i.NRF2401_SendData) for NRF2401_SendData
+    nrf2401.o(i.NRF2401_SendData_Duplex) refers to nrf2401.o(i.NRF2401_SetRXMode) for NRF2401_SetRXMode
+    nrf2401.o(i.NRF2401_SetRXMode) refers to nrf2401.o(i.NRF2401_WriteBuffer) for NRF2401_WriteBuffer
+    nrf2401.o(i.NRF2401_SetRXMode) refers to nrf2401.o(i.NRF2401_ReadWriteReg) for NRF2401_ReadWriteReg
+    nrf2401.o(i.NRF2401_SetRXMode) refers to nrf2401.o(.constdata) for RX_ADDRESS
+    nrf2401.o(i.NRF2401_SetTXMode) refers to nrf2401.o(i.NVIC_DisableIRQ) for NVIC_DisableIRQ
+    nrf2401.o(i.NRF2401_SetTXMode) refers to nrf2401.o(i.NRF2401_WriteBuffer) for NRF2401_WriteBuffer
+    nrf2401.o(i.NRF2401_SetTXMode) refers to nrf2401.o(i.NRF2401_ReadWriteReg) for NRF2401_ReadWriteReg
+    nrf2401.o(i.NRF2401_SetTXMode) refers to nrf2401.o(.constdata) for TX_ADDRESS
+    nrf2401.o(i.NRF2401_WriteBuffer) refers to nrf2401.o(i.NRF2401_ReadWriteByte) for NRF2401_ReadWriteByte
+    nrf2401.o(i.NRF24L01_Check) refers to nrf2401.o(i.NRF2401_WriteBuffer) for NRF2401_WriteBuffer
+    nrf2401.o(i.NRF24L01_Check) refers to nrf2401.o(i.NRF2401_ReadBuffer) for NRF2401_ReadBuffer
+    mt9v032.o(i.VSYNC) refers to mt9v032.o(.bss) for image
+    mt9v032.o(i.camera_init) refers to uart.o(i.uart_init) for uart_init
+    mt9v032.o(i.camera_init) refers to uart.o(i.uart_rx_irq_en) for uart_rx_irq_en
+    mt9v032.o(i.camera_init) refers to mt9v032.o(i.get_config) for get_config
+    mt9v032.o(i.camera_init) refers to dma.o(i.dma_portx2buff_init) for dma_portx2buff_init
+    mt9v032.o(i.camera_init) refers to port.o(i.port_init) for port_init
+    mt9v032.o(i.camera_init) refers to mt9v032.o(i.NVIC_EnableIRQ) for NVIC_EnableIRQ
+    mt9v032.o(i.camera_init) refers to mt9v032.o(.bss) for image
+    mt9v032.o(i.get_config) refers to uart.o(i.uart_putbuff) for uart_putbuff
+    mt9v032.o(i.get_config) refers to mt9v032.o(.data) for GET_CFG
+    mt9v032.o(i.get_version) refers to uart.o(i.uart_putbuff) for uart_putbuff
+    mt9v032.o(i.get_version) refers to mt9v032.o(.data) for uart_receive_flag
+    mt9v032.o(i.mt9v032_cof_uart_interrupt) refers to uart.o(i.uart_getchar) for uart_getchar
+    mt9v032.o(i.mt9v032_cof_uart_interrupt) refers to mt9v032.o(.data) for receive
+    mt9v032.o(i.row_finished) refers to mt9v032.o(.data) for mt9v032_finish_flag
+    mt9v032.o(i.seekfree_sendimg_032) refers to uart.o(i.uart_putchar) for uart_putchar
+    mt9v032.o(i.seekfree_sendimg_032) refers to uart.o(i.uart_putbuff) for uart_putbuff
+    mt9v032.o(i.seekfree_sendimg_032) refers to image_process.o(.bss) for bin_image
+    mt9v032.o(i.set_exposure_time) refers to uart.o(i.uart_putbuff) for uart_putbuff
+    mt9v032.o(i.set_exposure_time) refers to mt9v032.o(.data) for uart_receive_flag
+    mt9v032.o(i.set_mt9v032_reg) refers to uart.o(i.uart_putbuff) for uart_putbuff
+    mt9v032.o(i.set_mt9v032_reg) refers to systick.o(i.systick_delay_ms) for systick_delay_ms
+    mt9v032.o(i.set_mt9v032_reg) refers to mt9v032.o(.data) for uart_receive_flag
+    oled.o(i.OLED_ClrPixel) refers to oled.o(i.OLED_Set_Pos) for OLED_Set_Pos
+    oled.o(i.OLED_ClrPixel) refers to oled.o(i.OLED_WrCmd) for OLED_WrCmd
+    oled.o(i.OLED_ClrPixel) refers to oled.o(i.OLED_WrDat) for OLED_WrDat
+    oled.o(i.OLED_Fill) refers to oled.o(i.OLED_WrCmd) for OLED_WrCmd
+    oled.o(i.OLED_Fill) refers to oled.o(i.OLED_WrDat) for OLED_WrDat
+    oled.o(i.OLED_Init) refers to gpio.o(i.gpio_init) for gpio_init
+    oled.o(i.OLED_Init) refers to port.o(i.port_init_NoAlt) for port_init_NoAlt
+    oled.o(i.OLED_Init) refers to gpio.o(i.gpio_set) for gpio_set
+    oled.o(i.OLED_Init) refers to oled.o(i.OLED_DLY_ms) for OLED_DLY_ms
+    oled.o(i.OLED_Init) refers to oled.o(i.OLED_WrCmd) for OLED_WrCmd
+    oled.o(i.OLED_Init) refers to oled.o(i.OLED_Fill) for OLED_Fill
+    oled.o(i.OLED_Init) refers to oled.o(i.OLED_Set_Pos) for OLED_Set_Pos
+    oled.o(i.OLED_P6x8Str) refers to oled.o(i.OLED_Set_Pos) for OLED_Set_Pos
+    oled.o(i.OLED_P6x8Str) refers to oled.o(i.OLED_WrDat) for OLED_WrDat
+    oled.o(i.OLED_P6x8Str) refers to oled.o(.constdata) for F6x8
+    oled.o(i.OLED_P8x16Str) refers to oled.o(i.OLED_Set_Pos) for OLED_Set_Pos
+    oled.o(i.OLED_P8x16Str) refers to oled.o(i.OLED_WrDat) for OLED_WrDat
+    oled.o(i.OLED_P8x16Str) refers to oled.o(.constdata) for F8X16
+    oled.o(i.OLED_Print_Num) refers to oled.o(i.OLED_HEXACSII) for OLED_HEXACSII
+    oled.o(i.OLED_Print_Num) refers to oled.o(i.OLED_P8x16Str) for OLED_P8x16Str
+    oled.o(i.OLED_Print_Num1) refers to oled.o(i.OLED_P6x8Str) for OLED_P6x8Str
+    oled.o(i.OLED_Print_Num1) refers to oled.o(i.OLED_HEXACSII) for OLED_HEXACSII
+    oled.o(i.OLED_PutPixel) refers to oled.o(i.OLED_Set_Pos) for OLED_Set_Pos
+    oled.o(i.OLED_PutPixel) refers to oled.o(i.OLED_WrCmd) for OLED_WrCmd
+    oled.o(i.OLED_PutPixel) refers to oled.o(i.OLED_WrDat) for OLED_WrDat
+    oled.o(i.OLED_Set_Pos) refers to oled.o(i.OLED_WrCmd) for OLED_WrCmd
+    oled.o(i.OLED_Wr6Dat) refers to gpio.o(i.gpio_set) for gpio_set
+    oled.o(i.OLED_WrCmd) refers to gpio.o(i.gpio_set) for gpio_set
+    oled.o(i.OLED_WrDat) refers to gpio.o(i.gpio_set) for gpio_set
+    oled.o(i.dis_bmp) refers to oled.o(i.OLED_Set_Pos) for OLED_Set_Pos
+    oled.o(i.dis_bmp) refers to oled.o(i.OLED_WrDat) for OLED_WrDat
+    oled.o(i.dis_mybmp) refers to oled.o(i.OLED_Set_Pos) for OLED_Set_Pos
+    oled.o(i.dis_mybmp) refers to oled.o(i.OLED_WrDat) for OLED_WrDat
+    tracktype.o(i.CrossProcess) refers to tracktype.o(i.Crossflag) for Crossflag
+    tracktype.o(i.CrossProcess) refers to tracktype.o(.data) for turn_flag
+    tracktype.o(i.CrossProcess) refers to findtrack.o(.data) for RightLose
+    tracktype.o(i.CrossProcess) refers to findtrack.o(.bss) for Width
+    tracktype.o(i.CrossProcess) refers to servo.o(.data) for controlCnt
+    tracktype.o(i.CrossRecognition) refers to tracktype.o(i.FindInflectionPointR) for FindInflectionPointR
+    tracktype.o(i.CrossRecognition) refers to tracktype.o(i.FindInflectionPointL) for FindInflectionPointL
+    tracktype.o(i.CrossRecognition) refers to tracktype.o(.data) for InflectionPointR
+    tracktype.o(i.CrossRecognition) refers to findtrack.o(.data) for AllLose
+    tracktype.o(i.Crossflag) refers to smartcar_init.o(.data) for cross_state
+    tracktype.o(i.Crossflag) refers to tracktype.o(.data) for normal_flag
+    tracktype.o(i.FindInflectionPointL) refers to findtrack.o(.bss) for LeftEdge
+    tracktype.o(i.FindInflectionPointR) refers to findtrack.o(.bss) for RightEdge
+    image_process.o(i.Image_filter) refers to image_process.o(.bss) for bin_image
+    image_process.o(i.Ostu) refers to mt9v032.o(.bss) for image
+    image_process.o(i.Ostu) refers to image_process.o(.data) for Ostu_Threshold
+    image_process.o(i.Ostu) refers to image_process.o(.bss) for BinArray
+    image_process.o(i.binImage) refers to image_process.o(i.Ostu) for Ostu
+    image_process.o(i.binImage) refers to mt9v032.o(.bss) for image
+    image_process.o(i.binImage) refers to image_process.o(.bss) for bin_image
+    image_process.o(i.imageProcess) refers to image_process.o(i.binImage) for binImage
+    image_process.o(i.imageProcess) refers to image_process.o(i.Image_filter) for Image_filter
+    findtrack.o(i.SearchCenterBlackline) refers to findtrack.o(i.SetInitVal) for SetInitVal
+    findtrack.o(i.SearchCenterBlackline) refers to findtrack.o(.data) for LeftLose
+    findtrack.o(i.SearchCenterBlackline) refers to findtrack.o(.bss) for MiddleLine
+    findtrack.o(i.SearchCenterBlackline) refers to image_process.o(.bss) for bin_image
+    findtrack.o(i.SetInitVal) refers to dflti.o(.text) for __aeabi_i2d
+    findtrack.o(i.SetInitVal) refers to dmul.o(.text) for __aeabi_dmul
+    findtrack.o(i.SetInitVal) refers to dadd.o(.text) for __aeabi_dadd
+    findtrack.o(i.SetInitVal) refers to dfixi.o(.text) for __aeabi_d2iz
+    findtrack.o(i.SetInitVal) refers to findtrack.o(.bss) for RightEdge
+    findtrack.o(i.findTrack) refers to findtrack.o(i.SearchCenterBlackline) for SearchCenterBlackline
+    hc_sr04.o(i.HC_SR04_Init) refers to gpio.o(i.gpio_init) for gpio_init
+    hc_sr04.o(i.distance) refers to pit.o(i.pit_delay) for pit_delay
+    hc_sr04.o(i.distance) refers to pit.o(i.pit_time_start) for pit_time_start
+    hc_sr04.o(i.distance) refers to systick.o(i.systick_delay) for systick_delay
+    hc_sr04.o(i.distance) refers to pit.o(i.pit_time_get) for pit_time_get
+    hc_sr04.o(i.distance) refers to dfltui.o(.text) for __aeabi_ui2d
+    hc_sr04.o(i.distance) refers to dmul.o(.text) for __aeabi_dmul
+    hc_sr04.o(i.distance) refers to ddiv.o(.text) for __aeabi_ddiv
+    hc_sr04.o(i.distance) refers to dfixui.o(.text) for __aeabi_d2uiz
+    hc_sr04.o(i.distance) refers to common.o(.data) for bus_clk_mhz
+    hc_sr04.o(i.distance) refers to hc_sr04.o(.data) for timevar
+    hc_sr04.o(i.distanceControl) refers to tracktype.o(.data) for signCnt
+    hc_sr04.o(i.distanceControl) refers to smartcar_init.o(.data) for cross_state
+    hc_sr04.o(i.distanceControl) refers to main.o(.data) for distance_true
+    hc_sr04.o(i.distanceControl) refers to hc_sr04.o(.data) for turn_wait
+    hc_sr04.o(i.distanceControl) refers to findtrack.o(.data) for signFrameFlag
+    hc_sr04.o(i.distanceControl) refers to servo.o(.data) for servoError
+    isr.o(i.DMA0_IRQHandler) refers to mt9v032.o(i.row_finished) for row_finished
+    isr.o(i.PIT2_IRQHandler) refers to encoder.o(i.SpeedGet) for SpeedGet
+    isr.o(i.PIT2_IRQHandler) refers to control.o(i.PID_Calc) for PID_Calc
+    isr.o(i.PIT2_IRQHandler) refers to motor.o(i.Motor_Control) for Motor_Control
+    isr.o(i.PIT2_IRQHandler) refers to isr.o(.data) for scount
+    isr.o(i.PIT2_IRQHandler) refers to smartcar_init.o(.data) for pid_speed_L
+    isr.o(i.PORTC_IRQHandler) refers to nrf2401.o(i.NRF2401_RecData) for NRF2401_RecData
+    isr.o(i.PORTC_IRQHandler) refers to nrf2401.o(.bss) for NRF2401RXBuffer
+    isr.o(i.PORTC_IRQHandler) refers to smartcar_init.o(.data) for car_state
+    isr.o(i.PORTE_IRQHandler) refers to mt9v032.o(i.VSYNC) for VSYNC
+    isr.o(i.UART3_RX_TX_IRQHandler) refers to mt9v032.o(i.mt9v032_cof_uart_interrupt) for mt9v032_cof_uart_interrupt
+    main.o(i.main) refers to common.o(i.get_clk) for get_clk
+    main.o(i.main) refers to smartcar_init.o(i.car_init) for car_init
+    main.o(i.main) refers to key.o(i.Key_Check) for Key_Check
+    main.o(i.main) refers to main.o(i.NVIC_DisableIRQ) for NVIC_DisableIRQ
+    main.o(i.main) refers to motor.o(i.Motor_stop) for Motor_stop
+    main.o(i.main) refers to motor.o(i.Motor_Control) for Motor_Control
+    main.o(i.main) refers to oled.o(i.OLED_Print_Num1) for OLED_Print_Num1
+    main.o(i.main) refers to image_process.o(i.imageProcess) for imageProcess
+    main.o(i.main) refers to findtrack.o(i.findTrack) for findTrack
+    main.o(i.main) refers to tracktype.o(i.CrossRecognition) for CrossRecognition
+    main.o(i.main) refers to tracktype.o(i.CrossProcess) for CrossProcess
+    main.o(i.main) refers to servo.o(i.servoControl) for servoControl
+    main.o(i.main) refers to hc_sr04.o(i.distance) for distance
+    main.o(i.main) refers to hc_sr04.o(i.distanceControl) for distanceControl
+    main.o(i.main) refers to oled.o(i.OLED_Print_Num) for OLED_Print_Num
+    main.o(i.main) refers to memcpya.o(.text) for __aeabi_memcpy
+    main.o(i.main) refers to oled.o(i.dis_mybmp) for dis_mybmp
+    main.o(i.main) refers to main.o(.data) for keydown
+    main.o(i.main) refers to smartcar_init.o(.data) for car_state
+    main.o(i.main) refers to hc_sr04.o(.data) for Distance
+    main.o(i.main) refers to mt9v032.o(.data) for mt9v032_finish_flag
+    main.o(i.main) refers to tracktype.o(.data) for Cross
+    main.o(i.main) refers to image_process.o(.bss) for bin_image
+    main.o(i.main) refers to main.o(.bss) for dis_image
+    common.o(i.get_clk) refers to uart.o(i.uart_init) for uart_init
+    common.o(i.get_clk) refers to common.o(.data) for mcgout_clk_mhz
+    dma.o(i.dma_portx2buff_init) refers to port.o(i.port_init) for port_init
+    dma.o(i.dma_portx2buff_init) refers to gpio.o(i.gpio_init) for gpio_init
+    dma.o(i.dma_portx2buff_init_new) refers to gpio.o(i.gpio_init) for gpio_init
+    dma.o(i.dma_portx2buff_init_new) refers to port.o(i.port_init) for port_init
+    dma.o(i.dma_portx2buff_init_new2) refers to port.o(i.port_init) for port_init
+    dmacnt.o(i.DMACNT_GetValue) refers to dmacnt.o(i.DMA_GetCurrDataCounter) for DMA_GetCurrDataCounter
+    dmacnt.o(i.DMACNT_GetValue) refers to dmacnt.o(i.DMA_SetCurrDataCounter) for DMA_SetCurrDataCounter
+    dmacnt.o(i.DMACNT_Init) refers to dma.o(i.dma_portx2buff_init_new2) for dma_portx2buff_init_new2
+    dmacnt.o(i.DMACNT_Init) refers to port.o(i.port_init) for port_init
+    dmacnt.o(i.DMACNT_Init) refers to dmacnt.o(.data) for Dummy
+    ftm.o(i.FTM_port_mux) refers to port.o(i.port_init) for port_init
+    ftm.o(i.ftm_input_clean) refers to ftm.o(.constdata) for FTMX
+    ftm.o(i.ftm_input_get) refers to ftm.o(.constdata) for FTMX
+    ftm.o(i.ftm_input_init) refers to ftm.o(i.FTM_port_mux) for FTM_port_mux
+    ftm.o(i.ftm_input_init) refers to ftm.o(.constdata) for FTMX
+    ftm.o(i.ftm_input_init) refers to common.o(.data) for bus_clk_mhz
+    ftm.o(i.ftm_pwm_duty) refers to ftm.o(.data) for period
+    ftm.o(i.ftm_pwm_duty) refers to ftm.o(.constdata) for FTMX
+    ftm.o(i.ftm_pwm_freq) refers to common.o(.data) for bus_clk_mhz
+    ftm.o(i.ftm_pwm_freq) refers to ftm.o(.data) for period
+    ftm.o(i.ftm_pwm_freq) refers to ftm.o(.constdata) for FTMX
+    ftm.o(i.ftm_pwm_init) refers to ftm.o(i.FTM_port_mux) for FTM_port_mux
+    ftm.o(i.ftm_pwm_init) refers to common.o(.data) for bus_clk_mhz
+    ftm.o(i.ftm_pwm_init) refers to ftm.o(.data) for period
+    ftm.o(i.ftm_pwm_init) refers to ftm.o(.constdata) for FTMX
+    ftm.o(i.ftm_quad_clean) refers to ftm.o(.constdata) for FTMX
+    ftm.o(i.ftm_quad_get) refers to ftm.o(.constdata) for FTMX
+    ftm.o(i.ftm_quad_init) refers to port.o(i.port_init) for port_init
+    ftm.o(i.ftm_quad_init) refers to ftm.o(.constdata) for FTMX
+    gpio.o(i.gpio_ddr) refers to gpio.o(.constdata) for GPIOX
+    gpio.o(i.gpio_get) refers to gpio.o(.constdata) for GPIOX
+    gpio.o(i.gpio_init) refers to gpio.o(.constdata) for PORTX
+    gpio.o(i.gpio_set) refers to gpio.o(.constdata) for GPIOX
+    gpio.o(i.gpio_turn) refers to gpio.o(.constdata) for GPIOX
+    port.o(i.port_init) refers to port.o(.constdata) for PORTX
+    port.o(i.port_init_NoAlt) refers to port.o(.constdata) for PORTX
+    systick.o(i.systick_delay_ms) refers to systick.o(i.systick_delay) for systick_delay
+    systick.o(i.systick_delay_ms) refers to common.o(.data) for core_clk_mhz
+    uart.o(i.fputc) refers to uart.o(i.uart_putchar) for uart_putchar
+    uart.o(i.uart_getchar) refers to uart.o(.data) for uart
+    uart.o(i.uart_init) refers to port.o(i.port_init) for port_init
+    uart.o(i.uart_init) refers to uart.o(.data) for uart
+    uart.o(i.uart_init) refers to common.o(.data) for core_clk_mhz
+    uart.o(i.uart_putbuff) refers to uart.o(i.uart_putchar) for uart_putchar
+    uart.o(i.uart_putchar) refers to uart.o(.data) for uart
+    uart.o(i.uart_putstr) refers to uart.o(i.uart_putchar) for uart_putchar
+    uart.o(i.uart_querychar) refers to uart.o(.data) for uart
+    uart.o(i.uart_rx_irq_dis) refers to uart.o(i.NVIC_DisableIRQ) for NVIC_DisableIRQ
+    uart.o(i.uart_rx_irq_dis) refers to uart.o(.data) for uart
+    uart.o(i.uart_rx_irq_en) refers to uart.o(i.NVIC_EnableIRQ) for NVIC_EnableIRQ
+    uart.o(i.uart_rx_irq_en) refers to uart.o(.data) for uart
+    uart.o(i.uart_txc_irq_dis) refers to uart.o(i.NVIC_DisableIRQ) for NVIC_DisableIRQ
+    uart.o(i.uart_txc_irq_dis) refers to uart.o(.data) for uart
+    uart.o(i.uart_txc_irq_en) refers to uart.o(i.NVIC_EnableIRQ) for NVIC_EnableIRQ
+    uart.o(i.uart_txc_irq_en) refers to uart.o(.data) for uart
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    dadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ddiv.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    dflti.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dflti.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dfltui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfltui.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dfixi.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixi.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dfixui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixui.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    f2d.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    d2f.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    d2f.o(.text) refers to fepilogue.o(.text) for _float_round
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_mk66f18.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_mk66f18.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(i.main) for main
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing startup_mk66f18.o(HEAP), (0 bytes).
+    Removing system_mk66.o(.rev16_text), (4 bytes).
+    Removing system_mk66.o(.revsh_text), (4 bytes).
+    Removing motor.o(.rev16_text), (4 bytes).
+    Removing motor.o(.revsh_text), (4 bytes).
+    Removing servo.o(.rev16_text), (4 bytes).
+    Removing servo.o(.revsh_text), (4 bytes).
+    Removing servo.o(i.Server_Control), (56 bytes).
+    Removing servo.o(i.Servo_test), (52 bytes).
+    Removing encoder.o(.rev16_text), (4 bytes).
+    Removing encoder.o(.revsh_text), (4 bytes).
+    Removing smartcar_init.o(.rev16_text), (4 bytes).
+    Removing smartcar_init.o(.revsh_text), (4 bytes).
+    Removing buzzer.o(.rev16_text), (4 bytes).
+    Removing buzzer.o(.revsh_text), (4 bytes).
+    Removing key.o(.rev16_text), (4 bytes).
+    Removing key.o(.revsh_text), (4 bytes).
+    Removing nrf2401.o(.rev16_text), (4 bytes).
+    Removing nrf2401.o(.revsh_text), (4 bytes).
+    Removing nrf2401.o(i.NRF2401_SendData), (96 bytes).
+    Removing nrf2401.o(i.NRF2401_SendData_Duplex), (26 bytes).
+    Removing nrf2401.o(i.NRF2401_SetTXMode), (104 bytes).
+    Removing mt9v032.o(.rev16_text), (4 bytes).
+    Removing mt9v032.o(.revsh_text), (4 bytes).
+    Removing mt9v032.o(i.get_version), (76 bytes).
+    Removing mt9v032.o(i.seekfree_sendimg_032), (52 bytes).
+    Removing mt9v032.o(i.set_exposure_time), (80 bytes).
+    Removing mt9v032.o(i.set_mt9v032_reg), (124 bytes).
+    Removing oled.o(.rev16_text), (4 bytes).
+    Removing oled.o(.revsh_text), (4 bytes).
+    Removing oled.o(i.OLED_ClrPixel), (72 bytes).
+    Removing oled.o(i.OLED_PutPixel), (72 bytes).
+    Removing oled.o(i.OLED_Wr6Dat), (80 bytes).
+    Removing oled.o(i.dis_bmp), (472 bytes).
+    Removing tracktype.o(.rev16_text), (4 bytes).
+    Removing tracktype.o(.revsh_text), (4 bytes).
+    Removing tracktype.o(.bss), (376 bytes).
+    Removing image_process.o(.rev16_text), (4 bytes).
+    Removing image_process.o(.revsh_text), (4 bytes).
+    Removing control.o(.rev16_text), (4 bytes).
+    Removing control.o(.revsh_text), (4 bytes).
+    Removing findtrack.o(.rev16_text), (4 bytes).
+    Removing findtrack.o(.revsh_text), (4 bytes).
+    Removing hc_sr04.o(.rev16_text), (4 bytes).
+    Removing hc_sr04.o(.revsh_text), (4 bytes).
+    Removing isr.o(.rev16_text), (4 bytes).
+    Removing isr.o(.revsh_text), (4 bytes).
+    Removing main.o(.rev16_text), (4 bytes).
+    Removing main.o(.revsh_text), (4 bytes).
+    Removing common.o(.rev16_text), (4 bytes).
+    Removing common.o(.revsh_text), (4 bytes).
+    Removing dma.o(.rev16_text), (4 bytes).
+    Removing dma.o(.revsh_text), (4 bytes).
+    Removing dma.o(i.dma_portx2buff_init_new), (392 bytes).
+    Removing dmacnt.o(.rev16_text), (4 bytes).
+    Removing dmacnt.o(.revsh_text), (4 bytes).
+    Removing ftm.o(.rev16_text), (4 bytes).
+    Removing ftm.o(.revsh_text), (4 bytes).
+    Removing ftm.o(i.ftm_input_clean), (16 bytes).
+    Removing ftm.o(i.ftm_input_get), (24 bytes).
+    Removing ftm.o(i.ftm_input_init), (260 bytes).
+    Removing ftm.o(i.ftm_pwm_freq), (120 bytes).
+    Removing ftm.o(i.ftm_quad_clean), (16 bytes).
+    Removing ftm.o(i.ftm_quad_get), (20 bytes).
+    Removing ftm.o(i.ftm_quad_init), (228 bytes).
+    Removing gpio.o(.rev16_text), (4 bytes).
+    Removing gpio.o(.revsh_text), (4 bytes).
+    Removing gpio.o(i.gpio_ddr), (80 bytes).
+    Removing gpio.o(i.gpio_get), (44 bytes).
+    Removing gpio.o(i.gpio_turn), (40 bytes).
+    Removing pit.o(.rev16_text), (4 bytes).
+    Removing pit.o(.revsh_text), (4 bytes).
+    Removing pit.o(i.pit_close), (48 bytes).
+    Removing port.o(.rev16_text), (4 bytes).
+    Removing port.o(.revsh_text), (4 bytes).
+    Removing systick.o(.rev16_text), (4 bytes).
+    Removing systick.o(.revsh_text), (4 bytes).
+    Removing systick.o(i.systick_getval), (8 bytes).
+    Removing systick.o(i.systick_timing), (24 bytes).
+    Removing uart.o(.rev16_text), (4 bytes).
+    Removing uart.o(.revsh_text), (4 bytes).
+    Removing uart.o(i.NVIC_DisableIRQ), (24 bytes).
+    Removing uart.o(i.fputc), (18 bytes).
+    Removing uart.o(i.uart_putstr), (26 bytes).
+    Removing uart.o(i.uart_querychar), (36 bytes).
+    Removing uart.o(i.uart_rx_irq_dis), (56 bytes).
+    Removing uart.o(i.uart_txc_irq_dis), (56 bytes).
+    Removing uart.o(i.uart_txc_irq_en), (44 bytes).
+    Removing misc.o(.rev16_text), (4 bytes).
+    Removing misc.o(.revsh_text), (4 bytes).
+    Removing misc.o(i.write_vtor), (12 bytes).
+
+91 unused section(s) (total 3546 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section     1024  startup_mk66f18.o(RESET)
+    ../clib/../cmprslib/zerorunl2.c          0x00000000   Number         0  __dczerorl2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/d2f.c                  0x00000000   Number         0  d2f.o ABSOLUTE
+    ../fplib/microlib/f2d.c                  0x00000000   Number         0  f2d.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  fepilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixi.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixui.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dfltui.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dflti.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    ..\SRC\HARDWARE\src\common.c             0x00000000   Number         0  common.o ABSOLUTE
+    ..\SRC\HARDWARE\src\dma.c                0x00000000   Number         0  dma.o ABSOLUTE
+    ..\SRC\HARDWARE\src\dmacnt.c             0x00000000   Number         0  dmacnt.o ABSOLUTE
+    ..\SRC\HARDWARE\src\ftm.c                0x00000000   Number         0  ftm.o ABSOLUTE
+    ..\SRC\HARDWARE\src\gpio.c               0x00000000   Number         0  gpio.o ABSOLUTE
+    ..\SRC\HARDWARE\src\misc.c               0x00000000   Number         0  misc.o ABSOLUTE
+    ..\SRC\HARDWARE\src\pit.c                0x00000000   Number         0  pit.o ABSOLUTE
+    ..\SRC\HARDWARE\src\port.c               0x00000000   Number         0  port.o ABSOLUTE
+    ..\SRC\HARDWARE\src\systick.c            0x00000000   Number         0  systick.o ABSOLUTE
+    ..\SRC\HARDWARE\src\uart.c               0x00000000   Number         0  uart.o ABSOLUTE
+    ..\SRC\SMARTCAR\src\FindTrack.c          0x00000000   Number         0  findtrack.o ABSOLUTE
+    ..\SRC\SMARTCAR\src\HC_SR04.c            0x00000000   Number         0  hc_sr04.o ABSOLUTE
+    ..\SRC\SMARTCAR\src\MT9V032.c            0x00000000   Number         0  mt9v032.o ABSOLUTE
+    ..\SRC\SMARTCAR\src\TrackType.c          0x00000000   Number         0  tracktype.o ABSOLUTE
+    ..\SRC\SMARTCAR\src\buzzer.c             0x00000000   Number         0  buzzer.o ABSOLUTE
+    ..\SRC\SMARTCAR\src\control.c            0x00000000   Number         0  control.o ABSOLUTE
+    ..\SRC\SMARTCAR\src\encoder.c            0x00000000   Number         0  encoder.o ABSOLUTE
+    ..\SRC\SMARTCAR\src\image_process.c      0x00000000   Number         0  image_process.o ABSOLUTE
+    ..\SRC\SMARTCAR\src\key.c                0x00000000   Number         0  key.o ABSOLUTE
+    ..\SRC\SMARTCAR\src\motor.c              0x00000000   Number         0  motor.o ABSOLUTE
+    ..\SRC\SMARTCAR\src\nrf2401.c            0x00000000   Number         0  nrf2401.o ABSOLUTE
+    ..\SRC\SMARTCAR\src\oled.c               0x00000000   Number         0  oled.o ABSOLUTE
+    ..\SRC\SMARTCAR\src\servo.c              0x00000000   Number         0  servo.o ABSOLUTE
+    ..\SRC\SMARTCAR\src\smartcar_init.c      0x00000000   Number         0  smartcar_init.o ABSOLUTE
+    ..\SRC\STARTUP\DeviceSupport\MDK-ARM\startup_MK66F18.s 0x00000000   Number         0  startup_mk66f18.o ABSOLUTE
+    ..\SRC\STARTUP\DeviceSupport\system_MK66.c 0x00000000   Number         0  system_mk66.o ABSOLUTE
+    ..\SRC\USER\src\isr.c                    0x00000000   Number         0  isr.o ABSOLUTE
+    ..\SRC\USER\src\main.c                   0x00000000   Number         0  main.o ABSOLUTE
+    ..\\SRC\\HARDWARE\\src\\common.c         0x00000000   Number         0  common.o ABSOLUTE
+    ..\\SRC\\HARDWARE\\src\\dma.c            0x00000000   Number         0  dma.o ABSOLUTE
+    ..\\SRC\\HARDWARE\\src\\dmacnt.c         0x00000000   Number         0  dmacnt.o ABSOLUTE
+    ..\\SRC\\HARDWARE\\src\\ftm.c            0x00000000   Number         0  ftm.o ABSOLUTE
+    ..\\SRC\\HARDWARE\\src\\gpio.c           0x00000000   Number         0  gpio.o ABSOLUTE
+    ..\\SRC\\HARDWARE\\src\\misc.c           0x00000000   Number         0  misc.o ABSOLUTE
+    ..\\SRC\\HARDWARE\\src\\pit.c            0x00000000   Number         0  pit.o ABSOLUTE
+    ..\\SRC\\HARDWARE\\src\\port.c           0x00000000   Number         0  port.o ABSOLUTE
+    ..\\SRC\\HARDWARE\\src\\systick.c        0x00000000   Number         0  systick.o ABSOLUTE
+    ..\\SRC\\HARDWARE\\src\\uart.c           0x00000000   Number         0  uart.o ABSOLUTE
+    ..\\SRC\\SMARTCAR\\src\\FindTrack.c      0x00000000   Number         0  findtrack.o ABSOLUTE
+    ..\\SRC\\SMARTCAR\\src\\HC_SR04.c        0x00000000   Number         0  hc_sr04.o ABSOLUTE
+    ..\\SRC\\SMARTCAR\\src\\MT9V032.c        0x00000000   Number         0  mt9v032.o ABSOLUTE
+    ..\\SRC\\SMARTCAR\\src\\TrackType.c      0x00000000   Number         0  tracktype.o ABSOLUTE
+    ..\\SRC\\SMARTCAR\\src\\buzzer.c         0x00000000   Number         0  buzzer.o ABSOLUTE
+    ..\\SRC\\SMARTCAR\\src\\control.c        0x00000000   Number         0  control.o ABSOLUTE
+    ..\\SRC\\SMARTCAR\\src\\encoder.c        0x00000000   Number         0  encoder.o ABSOLUTE
+    ..\\SRC\\SMARTCAR\\src\\image_process.c  0x00000000   Number         0  image_process.o ABSOLUTE
+    ..\\SRC\\SMARTCAR\\src\\key.c            0x00000000   Number         0  key.o ABSOLUTE
+    ..\\SRC\\SMARTCAR\\src\\motor.c          0x00000000   Number         0  motor.o ABSOLUTE
+    ..\\SRC\\SMARTCAR\\src\\nrf2401.c        0x00000000   Number         0  nrf2401.o ABSOLUTE
+    ..\\SRC\\SMARTCAR\\src\\oled.c           0x00000000   Number         0  oled.o ABSOLUTE
+    ..\\SRC\\SMARTCAR\\src\\servo.c          0x00000000   Number         0  servo.o ABSOLUTE
+    ..\\SRC\\SMARTCAR\\src\\smartcar_init.c  0x00000000   Number         0  smartcar_init.o ABSOLUTE
+    ..\\SRC\\STARTUP\\DeviceSupport\\system_MK66.c 0x00000000   Number         0  system_mk66.o ABSOLUTE
+    ..\\SRC\\USER\\src\\isr.c                0x00000000   Number         0  isr.o ABSOLUTE
+    ..\\SRC\\USER\\src\\main.c               0x00000000   Number         0  main.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    .ARM.__at_0x400                          0x00000400   Section       16  startup_mk66f18.o(.ARM.__at_0x400)
+    .ARM.Collect$$$$00000000                 0x00000410   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x00000410   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x00000414   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x00000418   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x00000418   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x00000418   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x00000420   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x00000420   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x00000420   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x00000420   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x00000424   Section       40  startup_mk66f18.o(.text)
+    $v0                                      0x00000424   Number         0  startup_mk66f18.o(.text)
+    .text                                    0x0000044c   Section        0  memcpya.o(.text)
+    .text                                    0x00000470   Section        0  dadd.o(.text)
+    .text                                    0x000005be   Section        0  dmul.o(.text)
+    .text                                    0x000006a2   Section        0  ddiv.o(.text)
+    .text                                    0x00000780   Section        0  dflti.o(.text)
+    .text                                    0x000007a2   Section        0  dfltui.o(.text)
+    .text                                    0x000007bc   Section        0  dfixi.o(.text)
+    .text                                    0x000007fa   Section        0  dfixui.o(.text)
+    .text                                    0x0000082c   Section        0  f2d.o(.text)
+    .text                                    0x00000852   Section        0  d2f.o(.text)
+    .text                                    0x0000088a   Section        0  llshl.o(.text)
+    .text                                    0x000008a8   Section        0  llushr.o(.text)
+    .text                                    0x000008c8   Section        0  llsshr.o(.text)
+    .text                                    0x000008ec   Section        0  fepilogue.o(.text)
+    .text                                    0x000008ec   Section        0  iusefp.o(.text)
+    .text                                    0x0000095a   Section        0  depilogue.o(.text)
+    .text                                    0x00000a14   Section       36  init.o(.text)
+    .text                                    0x00000a38   Section        0  __dczerorl2.o(.text)
+    i.CalculateError                         0x00000a90   Section        0  servo.o(i.CalculateError)
+    CalculateError                           0x00000a91   Thumb Code   244  servo.o(i.CalculateError)
+    i.CrossProcess                           0x00000ba8   Section        0  tracktype.o(i.CrossProcess)
+    i.CrossRecognition                       0x000011ac   Section        0  tracktype.o(i.CrossRecognition)
+    i.Crossflag                              0x00001254   Section        0  tracktype.o(i.Crossflag)
+    Crossflag                                0x00001255   Thumb Code   194  tracktype.o(i.Crossflag)
+    i.DMA0_IRQHandler                        0x00001334   Section        0  isr.o(i.DMA0_IRQHandler)
+    i.DMACNT_GetValue                        0x0000134c   Section        0  dmacnt.o(i.DMACNT_GetValue)
+    i.DMACNT_Init                            0x00001370   Section        0  dmacnt.o(i.DMACNT_Init)
+    i.DMA_GetCurrDataCounter                 0x000013cc   Section        0  dmacnt.o(i.DMA_GetCurrDataCounter)
+    i.DMA_SetCurrDataCounter                 0x000013e0   Section        0  dmacnt.o(i.DMA_SetCurrDataCounter)
+    i.Disable_Wdog                           0x000013f4   Section        0  system_mk66.o(i.Disable_Wdog)
+    i.Encoder_Init                           0x00001410   Section        0  encoder.o(i.Encoder_Init)
+    i.FTM_port_mux                           0x00001438   Section        0  ftm.o(i.FTM_port_mux)
+    i.FindInflectionPointL                   0x00001544   Section        0  tracktype.o(i.FindInflectionPointL)
+    i.FindInflectionPointR                   0x000015e8   Section        0  tracktype.o(i.FindInflectionPointR)
+    i.HC_SR04_Init                           0x00001690   Section        0  hc_sr04.o(i.HC_SR04_Init)
+    i.Image_filter                           0x000016a8   Section        0  image_process.o(i.Image_filter)
+    Image_filter                             0x000016a9   Thumb Code   248  image_process.o(i.Image_filter)
+    i.Key_Check                              0x000017a4   Section        0  key.o(i.Key_Check)
+    i.Key_Init                               0x00001878   Section        0  key.o(i.Key_Init)
+    i.Motor_Control                          0x000018b8   Section        0  motor.o(i.Motor_Control)
+    i.Motor_Init                             0x00001984   Section        0  motor.o(i.Motor_Init)
+    i.Motor_stop                             0x000019d8   Section        0  motor.o(i.Motor_stop)
+    i.NRF2401_Init                           0x00001a48   Section        0  nrf2401.o(i.NRF2401_Init)
+    i.NRF2401_ReadBuffer                     0x00001acc   Section        0  nrf2401.o(i.NRF2401_ReadBuffer)
+    NRF2401_ReadBuffer                       0x00001acd   Thumb Code    56  nrf2401.o(i.NRF2401_ReadBuffer)
+    i.NRF2401_ReadWriteByte                  0x00001b08   Section        0  nrf2401.o(i.NRF2401_ReadWriteByte)
+    NRF2401_ReadWriteByte                    0x00001b09   Thumb Code    56  nrf2401.o(i.NRF2401_ReadWriteByte)
+    i.NRF2401_ReadWriteReg                   0x00001b48   Section        0  nrf2401.o(i.NRF2401_ReadWriteReg)
+    NRF2401_ReadWriteReg                     0x00001b49   Thumb Code    36  nrf2401.o(i.NRF2401_ReadWriteReg)
+    i.NRF2401_RecData                        0x00001b70   Section        0  nrf2401.o(i.NRF2401_RecData)
+    i.NRF2401_SetRXMode                      0x00001ba8   Section        0  nrf2401.o(i.NRF2401_SetRXMode)
+    i.NRF2401_WriteBuffer                    0x00001c14   Section        0  nrf2401.o(i.NRF2401_WriteBuffer)
+    NRF2401_WriteBuffer                      0x00001c15   Thumb Code    56  nrf2401.o(i.NRF2401_WriteBuffer)
+    i.NRF24L01_Check                         0x00001c50   Section        0  nrf2401.o(i.NRF24L01_Check)
+    NRF24L01_Check                           0x00001c51   Thumb Code    58  nrf2401.o(i.NRF24L01_Check)
+    i.NVIC_DisableIRQ                        0x00001c94   Section        0  nrf2401.o(i.NVIC_DisableIRQ)
+    NVIC_DisableIRQ                          0x00001c95   Thumb Code    18  nrf2401.o(i.NVIC_DisableIRQ)
+    i.NVIC_DisableIRQ                        0x00001cac   Section        0  main.o(i.NVIC_DisableIRQ)
+    NVIC_DisableIRQ                          0x00001cad   Thumb Code    18  main.o(i.NVIC_DisableIRQ)
+    i.NVIC_EnableIRQ                         0x00001cc4   Section        0  mt9v032.o(i.NVIC_EnableIRQ)
+    NVIC_EnableIRQ                           0x00001cc5   Thumb Code    22  mt9v032.o(i.NVIC_EnableIRQ)
+    i.NVIC_EnableIRQ                         0x00001cda   Section        0  uart.o(i.NVIC_EnableIRQ)
+    NVIC_EnableIRQ                           0x00001cdb   Thumb Code    22  uart.o(i.NVIC_EnableIRQ)
+    i.OLED_DLY_ms                            0x00001cf0   Section        0  oled.o(i.OLED_DLY_ms)
+    i.OLED_Fill                              0x00001d0c   Section        0  oled.o(i.OLED_Fill)
+    i.OLED_HEXACSII                          0x00001d46   Section        0  oled.o(i.OLED_HEXACSII)
+    i.OLED_Init                              0x00001d76   Section        0  oled.o(i.OLED_Init)
+    i.OLED_P6x8Str                           0x00001eb0   Section        0  oled.o(i.OLED_P6x8Str)
+    i.OLED_P8x16Str                          0x00001f14   Section        0  oled.o(i.OLED_P8x16Str)
+    i.OLED_Print_Num                         0x00001f9c   Section        0  oled.o(i.OLED_Print_Num)
+    i.OLED_Print_Num1                        0x00001fd0   Section        0  oled.o(i.OLED_Print_Num1)
+    i.OLED_Set_Pos                           0x0000202c   Section        0  oled.o(i.OLED_Set_Pos)
+    i.OLED_WrCmd                             0x00002054   Section        0  oled.o(i.OLED_WrCmd)
+    i.OLED_WrDat                             0x000020a4   Section        0  oled.o(i.OLED_WrDat)
+    i.Ostu                                   0x000020f4   Section        0  image_process.o(i.Ostu)
+    Ostu                                     0x000020f5   Thumb Code   340  image_process.o(i.Ostu)
+    i.PID_Calc                               0x00002258   Section        0  control.o(i.PID_Calc)
+    i.PID_init                               0x0000230c   Section        0  control.o(i.PID_init)
+    i.PIT0_IRQHandler                        0x00002334   Section        0  isr.o(i.PIT0_IRQHandler)
+    i.PIT1_IRQHandler                        0x00002348   Section        0  isr.o(i.PIT1_IRQHandler)
+    i.PIT2_IRQHandler                        0x0000235c   Section        0  isr.o(i.PIT2_IRQHandler)
+    i.PORTC_IRQHandler                       0x00002420   Section        0  isr.o(i.PORTC_IRQHandler)
+    i.PORTE_IRQHandler                       0x000024f4   Section        0  isr.o(i.PORTE_IRQHandler)
+    i.SYSTEM_CLK                             0x00002508   Section        0  system_mk66.o(i.SYSTEM_CLK)
+    i.SearchCenterBlackline                  0x000025c0   Section        0  findtrack.o(i.SearchCenterBlackline)
+    SearchCenterBlackline                    0x000025c1   Thumb Code  2218  findtrack.o(i.SearchCenterBlackline)
+    i.Servo_Init                             0x00002e80   Section        0  servo.o(i.Servo_Init)
+    i.SetInitVal                             0x00002e98   Section        0  findtrack.o(i.SetInitVal)
+    SetInitVal                               0x00002e99   Thumb Code    98  findtrack.o(i.SetInitVal)
+    i.SpeedGet                               0x00002f1c   Section        0  encoder.o(i.SpeedGet)
+    i.Start                                  0x00002f94   Section        0  system_mk66.o(i.Start)
+    i.UART0_RX_TX_IRQHandler                 0x00002fbc   Section        0  isr.o(i.UART0_RX_TX_IRQHandler)
+    i.UART3_RX_TX_IRQHandler                 0x00002fcc   Section        0  isr.o(i.UART3_RX_TX_IRQHandler)
+    i.UART4_RX_TX_IRQHandler                 0x00002fe8   Section        0  isr.o(i.UART4_RX_TX_IRQHandler)
+    i.VSYNC                                  0x00002ff8   Section        0  mt9v032.o(i.VSYNC)
+    i.__scatterload_copy                     0x00003050   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x0000305e   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00003060   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.binImage                               0x00003070   Section        0  image_process.o(i.binImage)
+    binImage                                 0x00003071   Thumb Code    52  image_process.o(i.binImage)
+    i.buzzer_Init                            0x000030b0   Section        0  buzzer.o(i.buzzer_Init)
+    i.buzzer_Ring                            0x000030c0   Section        0  buzzer.o(i.buzzer_Ring)
+    i.camera_init                            0x000030dc   Section        0  mt9v032.o(i.camera_init)
+    i.car_communication_init                 0x000031a8   Section        0  smartcar_init.o(i.car_communication_init)
+    car_communication_init                   0x000031a9   Thumb Code    36  smartcar_init.o(i.car_communication_init)
+    i.car_init                               0x000031e8   Section        0  smartcar_init.o(i.car_init)
+    i.car_interrupt_init                     0x000033a4   Section        0  smartcar_init.o(i.car_interrupt_init)
+    car_interrupt_init                       0x000033a5   Thumb Code    64  smartcar_init.o(i.car_interrupt_init)
+    i.dis_mybmp                              0x000033f0   Section        0  oled.o(i.dis_mybmp)
+    i.distance                               0x00003574   Section        0  hc_sr04.o(i.distance)
+    i.distanceControl                        0x00003648   Section        0  hc_sr04.o(i.distanceControl)
+    i.div_set                                0x000037c8   Section        0  system_mk66.o(i.div_set)
+    i.dma_portx2buff_init                    0x00003814   Section        0  dma.o(i.dma_portx2buff_init)
+    i.dma_portx2buff_init_new2               0x000039b8   Section        0  dma.o(i.dma_portx2buff_init_new2)
+    i.findTrack                              0x00003b18   Section        0  findtrack.o(i.findTrack)
+    i.ftm_pwm_duty                           0x00003b20   Section        0  ftm.o(i.ftm_pwm_duty)
+    i.ftm_pwm_init                           0x00003b88   Section        0  ftm.o(i.ftm_pwm_init)
+    i.get_clk                                0x00003ca4   Section        0  common.o(i.get_clk)
+    i.get_config                             0x00003d18   Section        0  mt9v032.o(i.get_config)
+    i.gpio_init                              0x00003d84   Section        0  gpio.o(i.gpio_init)
+    i.gpio_set                               0x00003eec   Section        0  gpio.o(i.gpio_set)
+    i.imageProcess                           0x00003f34   Section        0  image_process.o(i.imageProcess)
+    i.main                                   0x00003f40   Section        0  main.o(i.main)
+    i.motorSet                               0x00004194   Section        0  smartcar_init.o(i.motorSet)
+    motorSet                                 0x00004195   Thumb Code    40  smartcar_init.o(i.motorSet)
+    i.mt9v032_cof_uart_interrupt             0x000041cc   Section        0  mt9v032.o(i.mt9v032_cof_uart_interrupt)
+    i.pit_delay                              0x0000421c   Section        0  pit.o(i.pit_delay)
+    i.pit_init                               0x0000429c   Section        0  pit.o(i.pit_init)
+    i.pit_time_get                           0x000042f8   Section        0  pit.o(i.pit_time_get)
+    i.pit_time_start                         0x0000434c   Section        0  pit.o(i.pit_time_start)
+    i.port_init                              0x000043a8   Section        0  port.o(i.port_init)
+    i.port_init_NoAlt                        0x0000441c   Section        0  port.o(i.port_init_NoAlt)
+    i.row_finished                           0x00004470   Section        0  mt9v032.o(i.row_finished)
+    i.servoControl                           0x0000447c   Section        0  servo.o(i.servoControl)
+    i.systick_delay                          0x00004634   Section        0  systick.o(i.systick_delay)
+    i.systick_delay_ms                       0x00004660   Section        0  systick.o(i.systick_delay_ms)
+    i.uart_getchar                           0x00004684   Section        0  uart.o(i.uart_getchar)
+    i.uart_init                              0x000046a8   Section        0  uart.o(i.uart_init)
+    i.uart_putbuff                           0x00004880   Section        0  uart.o(i.uart_putbuff)
+    i.uart_putchar                           0x000048a0   Section        0  uart.o(i.uart_putchar)
+    i.uart_rx_irq_en                         0x000048c0   Section        0  uart.o(i.uart_rx_irq_en)
+    .constdata                               0x000048ec   Section       10  nrf2401.o(.constdata)
+    .constdata                               0x000048f6   Section     2072  oled.o(.constdata)
+    .constdata                               0x00005110   Section       16  ftm.o(.constdata)
+    FTMX                                     0x00005110   Data          16  ftm.o(.constdata)
+    .constdata                               0x00005120   Section       40  gpio.o(.constdata)
+    PORTX                                    0x00005120   Data          20  gpio.o(.constdata)
+    GPIOX                                    0x00005134   Data          20  gpio.o(.constdata)
+    .constdata                               0x00005148   Section       40  port.o(.constdata)
+    PORTX                                    0x00005148   Data          20  port.o(.constdata)
+    GPIOX                                    0x0000515c   Data          20  port.o(.constdata)
+    .data                                    0x20000000   Section       24  motor.o(.data)
+    .data                                    0x20000018   Section      304  servo.o(.data)
+    .data                                    0x20000148   Section       11  encoder.o(.data)
+    left_cnt                                 0x20000151   Data           1  encoder.o(.data)
+    right_cnt                                0x20000152   Data           1  encoder.o(.data)
+    .data                                    0x20000154   Section       30  smartcar_init.o(.data)
+    .data                                    0x20000172   Section       77  mt9v032.o(.data)
+    .data                                    0x200001c0   Section       32  tracktype.o(.data)
+    .data                                    0x200001e0   Section        2  image_process.o(.data)
+    .data                                    0x200001e4   Section       16  findtrack.o(.data)
+    .data                                    0x200001f4   Section       38  hc_sr04.o(.data)
+    .data                                    0x2000021c   Section       12  isr.o(.data)
+    .data                                    0x20000228   Section       11  main.o(.data)
+    keydown                                  0x20000228   Data           1  main.o(.data)
+    camera_oled_switch                       0x20000229   Data           1  main.o(.data)
+    .data                                    0x20000234   Section       12  common.o(.data)
+    .data                                    0x20000240   Section        1  dmacnt.o(.data)
+    .data                                    0x20000242   Section        6  ftm.o(.data)
+    .data                                    0x20000248   Section       20  uart.o(.data)
+    .bss                                     0x2000025c   Section       64  smartcar_init.o(.bss)
+    .bss                                     0x2000029c   Section       96  nrf2401.o(.bss)
+    .bss                                     0x200002fc   Section    12032  mt9v032.o(.bss)
+    .bss                                     0x200031fc   Section    12288  image_process.o(.bss)
+    BinArray                                 0x200060fc   Data         256  image_process.o(.bss)
+    .bss                                     0x200061fc   Section     1024  findtrack.o(.bss)
+    .bss                                     0x200065fc   Section     8192  main.o(.bss)
+    dis_image                                0x200065fc   Data        8192  main.o(.bss)
+    STACK                                    0x20008600   Section     1024  startup_mk66f18.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __Vectors                                0x00000000   Data           4  startup_mk66f18.o(RESET)
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_End                            0x00000400   Data           0  startup_mk66f18.o(RESET)
+    __Vectors_Size                           0x00000400   Number         0  startup_mk66f18.o ABSOLUTE
+    __main                                   0x00000411   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x00000411   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x00000415   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x00000419   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x00000419   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x00000419   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x00000419   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x00000421   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x00000421   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x00000425   Thumb Code    12  startup_mk66f18.o(.text)
+    NMI_Handler                              0x00000431   Thumb Code     2  startup_mk66f18.o(.text)
+    HardFault_Handler                        0x00000433   Thumb Code     2  startup_mk66f18.o(.text)
+    MemManage_Handler                        0x00000435   Thumb Code     2  startup_mk66f18.o(.text)
+    BusFault_Handler                         0x00000437   Thumb Code     2  startup_mk66f18.o(.text)
+    UsageFault_Handler                       0x00000439   Thumb Code     2  startup_mk66f18.o(.text)
+    SVC_Handler                              0x0000043b   Thumb Code     2  startup_mk66f18.o(.text)
+    DebugMon_Handler                         0x0000043d   Thumb Code     2  startup_mk66f18.o(.text)
+    PendSV_Handler                           0x0000043f   Thumb Code     2  startup_mk66f18.o(.text)
+    SysTick_Handler                          0x00000441   Thumb Code     2  startup_mk66f18.o(.text)
+    ADC0_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    ADC1_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    CAN0_Bus_Off_IRQHandler                  0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    CAN0_Error_IRQHandler                    0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    CAN0_ORed_Message_buffer_IRQHandler      0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    CAN0_Rx_Warning_IRQHandler               0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    CAN0_Tx_Warning_IRQHandler               0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    CAN0_Wake_Up_IRQHandler                  0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    CAN1_Bus_Off_IRQHandler                  0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    CAN1_Error_IRQHandler                    0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    CAN1_ORed_Message_buffer_IRQHandler      0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    CAN1_Rx_Warning_IRQHandler               0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    CAN1_Tx_Warning_IRQHandler               0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    CAN1_Wake_Up_IRQHandler                  0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    CMP0_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    CMP1_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    CMP2_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    CMP3_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    CMT_IRQHandler                           0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    DAC0_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    DAC1_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    DMA10_IRQHandler                         0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    DMA11_IRQHandler                         0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    DMA12_IRQHandler                         0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    DMA13_IRQHandler                         0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    DMA14_IRQHandler                         0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    DMA15_IRQHandler                         0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    DMA1_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    DMA2_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    DMA3_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    DMA4_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    DMA5_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    DMA6_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    DMA7_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    DMA8_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    DMA9_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    DMA_Error_IRQHandler                     0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    DefaultISR                               0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    ENET_1588_Timer_IRQHandler               0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    ENET_Error_IRQHandler                    0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    ENET_Receive_IRQHandler                  0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    ENET_Transmit_IRQHandler                 0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    FTFE_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    FTM0_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    FTM1_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    FTM2_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    FTM3_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    I2C0_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    I2C1_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    I2C2_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    I2C3_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    I2S0_Rx_IRQHandler                       0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    I2S0_Tx_IRQHandler                       0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    LLWU_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    LPTMR0_IRQHandler                        0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    LPUART0_IRQHandler                       0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    LVD_LVW_IRQHandler                       0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    MCG_IRQHandler                           0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    MCM_IRQHandler                           0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    PDB0_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    PIT3_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    PORTA_IRQHandler                         0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    PORTB_IRQHandler                         0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    PORTD_IRQHandler                         0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    RNG_IRQHandler                           0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    RTC_IRQHandler                           0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    RTC_Seconds_IRQHandler                   0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    Read_Collision_IRQHandler                0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    Reserved46_IRQHandler                    0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    Reserved71_IRQHandler                    0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    Reserved84_IRQHandler                    0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    Reserved85_IRQHandler                    0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    SDHC_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    SPI0_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    SPI1_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    SPI2_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    SWI_IRQHandler                           0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    TPM1_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    TPM2_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    TSI0_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    UART0_ERR_IRQHandler                     0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    UART1_ERR_IRQHandler                     0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    UART1_RX_TX_IRQHandler                   0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    UART2_ERR_IRQHandler                     0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    UART2_RX_TX_IRQHandler                   0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    UART3_ERR_IRQHandler                     0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    UART4_ERR_IRQHandler                     0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    USB0_IRQHandler                          0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    USBDCD_IRQHandler                        0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    USBHSDCD_IRQHandler                      0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    USBHS_IRQHandler                         0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    WDOG_EWM_IRQHandler                      0x00000443   Thumb Code     0  startup_mk66f18.o(.text)
+    __aeabi_memcpy                           0x0000044d   Thumb Code    36  memcpya.o(.text)
+    __aeabi_memcpy4                          0x0000044d   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memcpy8                          0x0000044d   Thumb Code     0  memcpya.o(.text)
+    __aeabi_dadd                             0x00000471   Thumb Code   322  dadd.o(.text)
+    __aeabi_dsub                             0x000005b3   Thumb Code     6  dadd.o(.text)
+    __aeabi_drsub                            0x000005b9   Thumb Code     6  dadd.o(.text)
+    __aeabi_dmul                             0x000005bf   Thumb Code   228  dmul.o(.text)
+    __aeabi_ddiv                             0x000006a3   Thumb Code   222  ddiv.o(.text)
+    __aeabi_i2d                              0x00000781   Thumb Code    34  dflti.o(.text)
+    __aeabi_ui2d                             0x000007a3   Thumb Code    26  dfltui.o(.text)
+    __aeabi_d2iz                             0x000007bd   Thumb Code    62  dfixi.o(.text)
+    __aeabi_d2uiz                            0x000007fb   Thumb Code    50  dfixui.o(.text)
+    __aeabi_f2d                              0x0000082d   Thumb Code    38  f2d.o(.text)
+    __aeabi_d2f                              0x00000853   Thumb Code    56  d2f.o(.text)
+    __aeabi_llsl                             0x0000088b   Thumb Code    30  llshl.o(.text)
+    _ll_shift_l                              0x0000088b   Thumb Code     0  llshl.o(.text)
+    __aeabi_llsr                             0x000008a9   Thumb Code    32  llushr.o(.text)
+    _ll_ushift_r                             0x000008a9   Thumb Code     0  llushr.o(.text)
+    __aeabi_lasr                             0x000008c9   Thumb Code    36  llsshr.o(.text)
+    _ll_sshift_r                             0x000008c9   Thumb Code     0  llsshr.o(.text)
+    __I$use$fp                               0x000008ed   Thumb Code     0  iusefp.o(.text)
+    _float_round                             0x000008ed   Thumb Code    18  fepilogue.o(.text)
+    _float_epilogue                          0x000008ff   Thumb Code    92  fepilogue.o(.text)
+    _double_round                            0x0000095b   Thumb Code    30  depilogue.o(.text)
+    _double_epilogue                         0x00000979   Thumb Code   156  depilogue.o(.text)
+    __scatterload                            0x00000a15   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x00000a15   Thumb Code     0  init.o(.text)
+    __decompress                             0x00000a39   Thumb Code     0  __dczerorl2.o(.text)
+    __decompress1                            0x00000a39   Thumb Code    86  __dczerorl2.o(.text)
+    CrossProcess                             0x00000ba9   Thumb Code  1496  tracktype.o(i.CrossProcess)
+    CrossRecognition                         0x000011ad   Thumb Code   146  tracktype.o(i.CrossRecognition)
+    DMA0_IRQHandler                          0x00001335   Thumb Code    20  isr.o(i.DMA0_IRQHandler)
+    DMACNT_GetValue                          0x0000134d   Thumb Code    34  dmacnt.o(i.DMACNT_GetValue)
+    DMACNT_Init                              0x00001371   Thumb Code    78  dmacnt.o(i.DMACNT_Init)
+    DMA_GetCurrDataCounter                   0x000013cd   Thumb Code    16  dmacnt.o(i.DMA_GetCurrDataCounter)
+    DMA_SetCurrDataCounter                   0x000013e1   Thumb Code    14  dmacnt.o(i.DMA_SetCurrDataCounter)
+    Disable_Wdog                             0x000013f5   Thumb Code    22  system_mk66.o(i.Disable_Wdog)
+    Encoder_Init                             0x00001411   Thumb Code    40  encoder.o(i.Encoder_Init)
+    FTM_port_mux                             0x00001439   Thumb Code   264  ftm.o(i.FTM_port_mux)
+    FindInflectionPointL                     0x00001545   Thumb Code   160  tracktype.o(i.FindInflectionPointL)
+    FindInflectionPointR                     0x000015e9   Thumb Code   164  tracktype.o(i.FindInflectionPointR)
+    HC_SR04_Init                             0x00001691   Thumb Code    24  hc_sr04.o(i.HC_SR04_Init)
+    Key_Check                                0x000017a5   Thumb Code   206  key.o(i.Key_Check)
+    Key_Init                                 0x00001879   Thumb Code    64  key.o(i.Key_Init)
+    Motor_Control                            0x000018b9   Thumb Code   168  motor.o(i.Motor_Control)
+    Motor_Init                               0x00001985   Thumb Code    68  motor.o(i.Motor_Init)
+    Motor_stop                               0x000019d9   Thumb Code    78  motor.o(i.Motor_stop)
+    NRF2401_Init                             0x00001a49   Thumb Code   116  nrf2401.o(i.NRF2401_Init)
+    NRF2401_RecData                          0x00001b71   Thumb Code    54  nrf2401.o(i.NRF2401_RecData)
+    NRF2401_SetRXMode                        0x00001ba9   Thumb Code    98  nrf2401.o(i.NRF2401_SetRXMode)
+    OLED_DLY_ms                              0x00001cf1   Thumb Code    28  oled.o(i.OLED_DLY_ms)
+    OLED_Fill                                0x00001d0d   Thumb Code    58  oled.o(i.OLED_Fill)
+    OLED_HEXACSII                            0x00001d47   Thumb Code    48  oled.o(i.OLED_HEXACSII)
+    OLED_Init                                0x00001d77   Thumb Code   314  oled.o(i.OLED_Init)
+    OLED_P6x8Str                             0x00001eb1   Thumb Code    96  oled.o(i.OLED_P6x8Str)
+    OLED_P8x16Str                            0x00001f15   Thumb Code   130  oled.o(i.OLED_P8x16Str)
+    OLED_Print_Num                           0x00001f9d   Thumb Code    52  oled.o(i.OLED_Print_Num)
+    OLED_Print_Num1                          0x00001fd1   Thumb Code    84  oled.o(i.OLED_Print_Num1)
+    OLED_Set_Pos                             0x0000202d   Thumb Code    40  oled.o(i.OLED_Set_Pos)
+    OLED_WrCmd                               0x00002055   Thumb Code    80  oled.o(i.OLED_WrCmd)
+    OLED_WrDat                               0x000020a5   Thumb Code    80  oled.o(i.OLED_WrDat)
+    PID_Calc                                 0x00002259   Thumb Code   178  control.o(i.PID_Calc)
+    PID_init                                 0x0000230d   Thumb Code    34  control.o(i.PID_init)
+    PIT0_IRQHandler                          0x00002335   Thumb Code    14  isr.o(i.PIT0_IRQHandler)
+    PIT1_IRQHandler                          0x00002349   Thumb Code    14  isr.o(i.PIT1_IRQHandler)
+    PIT2_IRQHandler                          0x0000235d   Thumb Code   166  isr.o(i.PIT2_IRQHandler)
+    PORTC_IRQHandler                         0x00002421   Thumb Code   186  isr.o(i.PORTC_IRQHandler)
+    PORTE_IRQHandler                         0x000024f5   Thumb Code    16  isr.o(i.PORTE_IRQHandler)
+    SYSTEM_CLK                               0x00002509   Thumb Code   170  system_mk66.o(i.SYSTEM_CLK)
+    Servo_Init                               0x00002e81   Thumb Code    18  servo.o(i.Servo_Init)
+    SpeedGet                                 0x00002f1d   Thumb Code    94  encoder.o(i.SpeedGet)
+    Start                                    0x00002f95   Thumb Code    34  system_mk66.o(i.Start)
+    UART0_RX_TX_IRQHandler                   0x00002fbd   Thumb Code    10  isr.o(i.UART0_RX_TX_IRQHandler)
+    UART3_RX_TX_IRQHandler                   0x00002fcd   Thumb Code    22  isr.o(i.UART3_RX_TX_IRQHandler)
+    UART4_RX_TX_IRQHandler                   0x00002fe9   Thumb Code    10  isr.o(i.UART4_RX_TX_IRQHandler)
+    VSYNC                                    0x00002ff9   Thumb Code    72  mt9v032.o(i.VSYNC)
+    __scatterload_copy                       0x00003051   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x0000305f   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00003061   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    buzzer_Init                              0x000030b1   Thumb Code    14  buzzer.o(i.buzzer_Init)
+    buzzer_Ring                              0x000030c1   Thumb Code    22  buzzer.o(i.buzzer_Ring)
+    camera_init                              0x000030dd   Thumb Code   172  mt9v032.o(i.camera_init)
+    car_init                                 0x000031e9   Thumb Code   376  smartcar_init.o(i.car_init)
+    dis_mybmp                                0x000033f1   Thumb Code   388  oled.o(i.dis_mybmp)
+    distance                                 0x00003575   Thumb Code   170  hc_sr04.o(i.distance)
+    distanceControl                          0x00003649   Thumb Code   312  hc_sr04.o(i.distanceControl)
+    div_set                                  0x000037c9   Thumb Code    68  system_mk66.o(i.div_set)
+    dma_portx2buff_init                      0x00003815   Thumb Code   398  dma.o(i.dma_portx2buff_init)
+    dma_portx2buff_init_new2                 0x000039b9   Thumb Code   330  dma.o(i.dma_portx2buff_init_new2)
+    findTrack                                0x00003b19   Thumb Code     8  findtrack.o(i.findTrack)
+    ftm_pwm_duty                             0x00003b21   Thumb Code    96  ftm.o(i.ftm_pwm_duty)
+    ftm_pwm_init                             0x00003b89   Thumb Code   270  ftm.o(i.ftm_pwm_init)
+    get_clk                                  0x00003ca5   Thumb Code    94  common.o(i.get_clk)
+    get_config                               0x00003d19   Thumb Code    96  mt9v032.o(i.get_config)
+    gpio_init                                0x00003d85   Thumb Code   346  gpio.o(i.gpio_init)
+    gpio_set                                 0x00003eed   Thumb Code    66  gpio.o(i.gpio_set)
+    imageProcess                             0x00003f35   Thumb Code    12  image_process.o(i.imageProcess)
+    main                                     0x00003f41   Thumb Code   538  main.o(i.main)
+    mt9v032_cof_uart_interrupt               0x000041cd   Thumb Code    68  mt9v032.o(i.mt9v032_cof_uart_interrupt)
+    pit_delay                                0x0000421d   Thumb Code   116  pit.o(i.pit_delay)
+    pit_init                                 0x0000429d   Thumb Code    78  pit.o(i.pit_init)
+    pit_time_get                             0x000042f9   Thumb Code    78  pit.o(i.pit_time_get)
+    pit_time_start                           0x0000434d   Thumb Code    80  pit.o(i.pit_time_start)
+    port_init                                0x000043a9   Thumb Code   102  port.o(i.port_init)
+    port_init_NoAlt                          0x0000441d   Thumb Code    76  port.o(i.port_init_NoAlt)
+    row_finished                             0x00004471   Thumb Code     8  mt9v032.o(i.row_finished)
+    servoControl                             0x0000447d   Thumb Code   374  servo.o(i.servoControl)
+    systick_delay                            0x00004635   Thumb Code    44  systick.o(i.systick_delay)
+    systick_delay_ms                         0x00004661   Thumb Code    32  systick.o(i.systick_delay_ms)
+    uart_getchar                             0x00004685   Thumb Code    30  uart.o(i.uart_getchar)
+    uart_init                                0x000046a9   Thumb Code   452  uart.o(i.uart_init)
+    uart_putbuff                             0x00004881   Thumb Code    30  uart.o(i.uart_putbuff)
+    uart_putchar                             0x000048a1   Thumb Code    28  uart.o(i.uart_putchar)
+    uart_rx_irq_en                           0x000048c1   Thumb Code    38  uart.o(i.uart_rx_irq_en)
+    TX_ADDRESS                               0x000048ec   Data           5  nrf2401.o(.constdata)
+    RX_ADDRESS                               0x000048f1   Data           5  nrf2401.o(.constdata)
+    F6x8                                     0x000048f6   Data         552  oled.o(.constdata)
+    F8X16                                    0x00004b1e   Data        1520  oled.o(.constdata)
+    Region$$Table$$Base                      0x00005170   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00005190   Number         0  anon$$obj.o(Region$$Table)
+    motor_LU                                 0x20000000   Data           2  motor.o(.data)
+    motor_LD                                 0x20000002   Data           2  motor.o(.data)
+    motor_RU                                 0x20000004   Data           2  motor.o(.data)
+    motor_RD                                 0x20000006   Data           2  motor.o(.data)
+    motor_left_speed_u                       0x20000008   Data           4  motor.o(.data)
+    motor_left_speed_d                       0x2000000c   Data           4  motor.o(.data)
+    motor_right_speed_u                      0x20000010   Data           4  motor.o(.data)
+    motor_right_speed_d                      0x20000014   Data           4  motor.o(.data)
+    servo_Mid                                0x20000018   Data           4  servo.o(.data)
+    servo_Min                                0x2000001c   Data           2  servo.o(.data)
+    servo_Max                                0x2000001e   Data           2  servo.o(.data)
+    servo_KP                                 0x20000020   Data           2  servo.o(.data)
+    servo_KD                                 0x20000022   Data           2  servo.o(.data)
+    SteerPwmAdd                              0x20000024   Data           4  servo.o(.data)
+    servoError                               0x20000028   Data           4  servo.o(.data)
+    servoLastError                           0x2000002c   Data           4  servo.o(.data)
+    WeightSum                                0x20000030   Data           4  servo.o(.data)
+    CenterMeanValue                          0x20000034   Data           4  servo.o(.data)
+    CenterSum                                0x20000038   Data           4  servo.o(.data)
+    SteerPwm                                 0x2000003c   Data           4  servo.o(.data)
+    LastSteerSwm                             0x20000040   Data           4  servo.o(.data)
+    controlCnt                               0x20000044   Data           2  servo.o(.data)
+    Weight                                   0x20000048   Data         256  servo.o(.data)
+    Speed_Left                               0x20000148   Data           4  encoder.o(.data)
+    Speed_Right                              0x2000014c   Data           4  encoder.o(.data)
+    stop_flag                                0x20000150   Data           1  encoder.o(.data)
+    pid_speed_R                              0x20000154   Data           4  smartcar_init.o(.data)
+    pid_speed_L                              0x20000158   Data           4  smartcar_init.o(.data)
+    car_state                                0x2000015c   Data           4  smartcar_init.o(.data)
+    cross_state                              0x20000160   Data           4  smartcar_init.o(.data)
+    cross_nextstate                          0x20000164   Data           4  smartcar_init.o(.data)
+    speed_p_L                                0x20000168   Data           2  smartcar_init.o(.data)
+    speed_p_R                                0x2000016a   Data           2  smartcar_init.o(.data)
+    speed_i                                  0x2000016c   Data           2  smartcar_init.o(.data)
+    speed_d                                  0x2000016e   Data           2  smartcar_init.o(.data)
+    SPEED                                    0x20000170   Data           2  smartcar_init.o(.data)
+    receive                                  0x20000172   Data           3  mt9v032.o(.data)
+    receive_num                              0x20000175   Data           1  mt9v032.o(.data)
+    uart_receive_flag                        0x20000176   Data           1  mt9v032.o(.data)
+    MT9V032_CFG                              0x20000178   Data          36  mt9v032.o(.data)
+    GET_CFG                                  0x2000019c   Data          32  mt9v032.o(.data)
+    version                                  0x200001bc   Data           2  mt9v032.o(.data)
+    mt9v032_finish_flag                      0x200001be   Data           1  mt9v032.o(.data)
+    InflectionPointL                         0x200001c0   Data           6  tracktype.o(.data)
+    InflectionPointR                         0x200001c6   Data           6  tracktype.o(.data)
+    Cross                                    0x200001cc   Data           3  tracktype.o(.data)
+    RCross_flag                              0x200001cf   Data           1  tracktype.o(.data)
+    LCross_flag                              0x200001d0   Data           1  tracktype.o(.data)
+    LRCross_flag                             0x200001d1   Data           1  tracktype.o(.data)
+    turn_flag                                0x200001d2   Data           1  tracktype.o(.data)
+    normal_flag                              0x200001d3   Data           1  tracktype.o(.data)
+    signWaitFlag                             0x200001d4   Data           1  tracktype.o(.data)
+    count                                    0x200001d8   Data           4  tracktype.o(.data)
+    signCnt                                  0x200001dc   Data           4  tracktype.o(.data)
+    Ostu_Threshold                           0x200001e0   Data           1  image_process.o(.data)
+    threshold                                0x200001e1   Data           1  image_process.o(.data)
+    LeftLose                                 0x200001e4   Data           4  findtrack.o(.data)
+    RightLose                                0x200001e8   Data           4  findtrack.o(.data)
+    AllLose                                  0x200001ec   Data           4  findtrack.o(.data)
+    signFrameFlag                            0x200001f0   Data           4  findtrack.o(.data)
+    Distance                                 0x200001f4   Data           4  hc_sr04.o(.data)
+    timevar                                  0x200001f8   Data           4  hc_sr04.o(.data)
+    SpeedDown0                               0x200001fc   Data           4  hc_sr04.o(.data)
+    SpeedDown1                               0x20000200   Data           4  hc_sr04.o(.data)
+    SpeedDown2                               0x20000204   Data           4  hc_sr04.o(.data)
+    SpeedDown3                               0x20000208   Data           4  hc_sr04.o(.data)
+    SpeedUp1                                 0x2000020c   Data           4  hc_sr04.o(.data)
+    SpeedUp2                                 0x20000210   Data           4  hc_sr04.o(.data)
+    wanted_speed                             0x20000214   Data           4  hc_sr04.o(.data)
+    turn_wait                                0x20000218   Data           1  hc_sr04.o(.data)
+    normalSpeedFlag                          0x20000219   Data           1  hc_sr04.o(.data)
+    PwmL_Forward                             0x2000021c   Data           4  isr.o(.data)
+    PwmR_Forward                             0x20000220   Data           4  isr.o(.data)
+    scount                                   0x20000224   Data           4  isr.o(.data)
+    distance_true                            0x2000022c   Data           4  main.o(.data)
+    stop_cnt                                 0x20000230   Data           2  main.o(.data)
+    stopsign_flag                            0x20000232   Data           1  main.o(.data)
+    mcgout_clk_mhz                           0x20000234   Data           4  common.o(.data)
+    core_clk_mhz                             0x20000238   Data           4  common.o(.data)
+    bus_clk_mhz                              0x2000023c   Data           4  common.o(.data)
+    Dummy                                    0x20000240   Data           1  dmacnt.o(.data)
+    period                                   0x20000242   Data           6  ftm.o(.data)
+    uart                                     0x20000248   Data          20  uart.o(.data)
+    speed_R                                  0x2000025c   Data          32  smartcar_init.o(.bss)
+    speed_L                                  0x2000027c   Data          32  smartcar_init.o(.bss)
+    NRF2401TXBuffer                          0x2000029c   Data          32  nrf2401.o(.bss)
+    NRF2401RXBuffer                          0x200002bc   Data          32  nrf2401.o(.bss)
+    WirelessReceiveStorage                   0x200002dc   Data          32  nrf2401.o(.bss)
+    image                                    0x200002fc   Data       12032  mt9v032.o(.bss)
+    bin_image                                0x200031fc   Data       12032  image_process.o(.bss)
+    MiddleLine                               0x200061fc   Data         256  findtrack.o(.bss)
+    RightEdge                                0x200062fc   Data         256  findtrack.o(.bss)
+    LeftEdge                                 0x200063fc   Data         256  findtrack.o(.bss)
+    Width                                    0x200064fc   Data         256  findtrack.o(.bss)
+    __initial_sp                             0x20008a00   Data           0  startup_mk66f18.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000411
+
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x000053ec, Max: 0x00100000, ABSOLUTE, COMPRESSED[0x00005214])
+
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00005190, Max: 0x00100000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x00000400   Data   RO            3    RESET               startup_mk66f18.o
+    0x00000400   0x00000400   0x00000010   Code   RO            4    .ARM.__at_0x400     startup_mk66f18.o
+    0x00000410   0x00000410   0x00000000   Code   RO         1436  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x00000410   0x00000410   0x00000004   Code   RO         1461    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x00000414   0x00000414   0x00000004   Code   RO         1464    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x00000418   0x00000418   0x00000000   Code   RO         1466    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x00000418   0x00000418   0x00000000   Code   RO         1468    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x00000418   0x00000418   0x00000008   Code   RO         1469    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x00000420   0x00000420   0x00000000   Code   RO         1471    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x00000420   0x00000420   0x00000000   Code   RO         1473    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x00000420   0x00000420   0x00000004   Code   RO         1462    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x00000424   0x00000424   0x00000028   Code   RO            5    .text               startup_mk66f18.o
+    0x0000044c   0x0000044c   0x00000024   Code   RO         1439    .text               mc_w.l(memcpya.o)
+    0x00000470   0x00000470   0x0000014e   Code   RO         1443    .text               mf_w.l(dadd.o)
+    0x000005be   0x000005be   0x000000e4   Code   RO         1445    .text               mf_w.l(dmul.o)
+    0x000006a2   0x000006a2   0x000000de   Code   RO         1447    .text               mf_w.l(ddiv.o)
+    0x00000780   0x00000780   0x00000022   Code   RO         1449    .text               mf_w.l(dflti.o)
+    0x000007a2   0x000007a2   0x0000001a   Code   RO         1451    .text               mf_w.l(dfltui.o)
+    0x000007bc   0x000007bc   0x0000003e   Code   RO         1453    .text               mf_w.l(dfixi.o)
+    0x000007fa   0x000007fa   0x00000032   Code   RO         1455    .text               mf_w.l(dfixui.o)
+    0x0000082c   0x0000082c   0x00000026   Code   RO         1457    .text               mf_w.l(f2d.o)
+    0x00000852   0x00000852   0x00000038   Code   RO         1459    .text               mf_w.l(d2f.o)
+    0x0000088a   0x0000088a   0x0000001e   Code   RO         1475    .text               mc_w.l(llshl.o)
+    0x000008a8   0x000008a8   0x00000020   Code   RO         1477    .text               mc_w.l(llushr.o)
+    0x000008c8   0x000008c8   0x00000024   Code   RO         1479    .text               mc_w.l(llsshr.o)
+    0x000008ec   0x000008ec   0x00000000   Code   RO         1481    .text               mc_w.l(iusefp.o)
+    0x000008ec   0x000008ec   0x0000006e   Code   RO         1482    .text               mf_w.l(fepilogue.o)
+    0x0000095a   0x0000095a   0x000000ba   Code   RO         1484    .text               mf_w.l(depilogue.o)
+    0x00000a14   0x00000a14   0x00000024   Code   RO         1486    .text               mc_w.l(init.o)
+    0x00000a38   0x00000a38   0x00000056   Code   RO         1496    .text               mc_w.l(__dczerorl2.o)
+    0x00000a8e   0x00000a8e   0x00000002   PAD
+    0x00000a90   0x00000a90   0x00000118   Code   RO          214    i.CalculateError    servo.o
+    0x00000ba8   0x00000ba8   0x00000604   Code   RO          688    i.CrossProcess      tracktype.o
+    0x000011ac   0x000011ac   0x000000a8   Code   RO          689    i.CrossRecognition  tracktype.o
+    0x00001254   0x00001254   0x000000e0   Code   RO          690    i.Crossflag         tracktype.o
+    0x00001334   0x00001334   0x00000018   Code   RO          883    i.DMA0_IRQHandler   isr.o
+    0x0000134c   0x0000134c   0x00000022   Code   RO         1046    i.DMACNT_GetValue   dmacnt.o
+    0x0000136e   0x0000136e   0x00000002   PAD
+    0x00001370   0x00001370   0x0000005c   Code   RO         1047    i.DMACNT_Init       dmacnt.o
+    0x000013cc   0x000013cc   0x00000014   Code   RO         1048    i.DMA_GetCurrDataCounter  dmacnt.o
+    0x000013e0   0x000013e0   0x00000014   Code   RO         1049    i.DMA_SetCurrDataCounter  dmacnt.o
+    0x000013f4   0x000013f4   0x0000001c   Code   RO           15    i.Disable_Wdog      system_mk66.o
+    0x00001410   0x00001410   0x00000028   Code   RO          267    i.Encoder_Init      encoder.o
+    0x00001438   0x00001438   0x0000010c   Code   RO         1091    i.FTM_port_mux      ftm.o
+    0x00001544   0x00001544   0x000000a4   Code   RO          691    i.FindInflectionPointL  tracktype.o
+    0x000015e8   0x000015e8   0x000000a8   Code   RO          692    i.FindInflectionPointR  tracktype.o
+    0x00001690   0x00001690   0x00000018   Code   RO          843    i.HC_SR04_Init      hc_sr04.o
+    0x000016a8   0x000016a8   0x000000fc   Code   RO          738    i.Image_filter      image_process.o
+    0x000017a4   0x000017a4   0x000000d4   Code   RO          375    i.Key_Check         key.o
+    0x00001878   0x00001878   0x00000040   Code   RO          376    i.Key_Init          key.o
+    0x000018b8   0x000018b8   0x000000cc   Code   RO           99    i.Motor_Control     motor.o
+    0x00001984   0x00001984   0x00000054   Code   RO          100    i.Motor_Init        motor.o
+    0x000019d8   0x000019d8   0x00000070   Code   RO          101    i.Motor_stop        motor.o
+    0x00001a48   0x00001a48   0x00000084   Code   RO          401    i.NRF2401_Init      nrf2401.o
+    0x00001acc   0x00001acc   0x0000003c   Code   RO          402    i.NRF2401_ReadBuffer  nrf2401.o
+    0x00001b08   0x00001b08   0x00000040   Code   RO          403    i.NRF2401_ReadWriteByte  nrf2401.o
+    0x00001b48   0x00001b48   0x00000028   Code   RO          404    i.NRF2401_ReadWriteReg  nrf2401.o
+    0x00001b70   0x00001b70   0x00000036   Code   RO          405    i.NRF2401_RecData   nrf2401.o
+    0x00001ba6   0x00001ba6   0x00000002   PAD
+    0x00001ba8   0x00001ba8   0x0000006c   Code   RO          408    i.NRF2401_SetRXMode  nrf2401.o
+    0x00001c14   0x00001c14   0x0000003c   Code   RO          410    i.NRF2401_WriteBuffer  nrf2401.o
+    0x00001c50   0x00001c50   0x00000044   Code   RO          411    i.NRF24L01_Check    nrf2401.o
+    0x00001c94   0x00001c94   0x00000018   Code   RO          412    i.NVIC_DisableIRQ   nrf2401.o
+    0x00001cac   0x00001cac   0x00000018   Code   RO          954    i.NVIC_DisableIRQ   main.o
+    0x00001cc4   0x00001cc4   0x00000016   Code   RO          492    i.NVIC_EnableIRQ    mt9v032.o
+    0x00001cda   0x00001cda   0x00000016   Code   RO         1326    i.NVIC_EnableIRQ    uart.o
+    0x00001cf0   0x00001cf0   0x0000001c   Code   RO          576    i.OLED_DLY_ms       oled.o
+    0x00001d0c   0x00001d0c   0x0000003a   Code   RO          577    i.OLED_Fill         oled.o
+    0x00001d46   0x00001d46   0x00000030   Code   RO          578    i.OLED_HEXACSII     oled.o
+    0x00001d76   0x00001d76   0x0000013a   Code   RO          579    i.OLED_Init         oled.o
+    0x00001eb0   0x00001eb0   0x00000064   Code   RO          580    i.OLED_P6x8Str      oled.o
+    0x00001f14   0x00001f14   0x00000088   Code   RO          581    i.OLED_P8x16Str     oled.o
+    0x00001f9c   0x00001f9c   0x00000034   Code   RO          582    i.OLED_Print_Num    oled.o
+    0x00001fd0   0x00001fd0   0x0000005c   Code   RO          583    i.OLED_Print_Num1   oled.o
+    0x0000202c   0x0000202c   0x00000028   Code   RO          585    i.OLED_Set_Pos      oled.o
+    0x00002054   0x00002054   0x00000050   Code   RO          587    i.OLED_WrCmd        oled.o
+    0x000020a4   0x000020a4   0x00000050   Code   RO          588    i.OLED_WrDat        oled.o
+    0x000020f4   0x000020f4   0x00000164   Code   RO          739    i.Ostu              image_process.o
+    0x00002258   0x00002258   0x000000b2   Code   RO          780    i.PID_Calc          control.o
+    0x0000230a   0x0000230a   0x00000002   PAD
+    0x0000230c   0x0000230c   0x00000028   Code   RO          781    i.PID_init          control.o
+    0x00002334   0x00002334   0x00000014   Code   RO          884    i.PIT0_IRQHandler   isr.o
+    0x00002348   0x00002348   0x00000014   Code   RO          885    i.PIT1_IRQHandler   isr.o
+    0x0000235c   0x0000235c   0x000000c4   Code   RO          886    i.PIT2_IRQHandler   isr.o
+    0x00002420   0x00002420   0x000000d4   Code   RO          887    i.PORTC_IRQHandler  isr.o
+    0x000024f4   0x000024f4   0x00000014   Code   RO          888    i.PORTE_IRQHandler  isr.o
+    0x00002508   0x00002508   0x000000b8   Code   RO           16    i.SYSTEM_CLK        system_mk66.o
+    0x000025c0   0x000025c0   0x000008c0   Code   RO          806    i.SearchCenterBlackline  findtrack.o
+    0x00002e80   0x00002e80   0x00000018   Code   RO          216    i.Servo_Init        servo.o
+    0x00002e98   0x00002e98   0x00000084   Code   RO          807    i.SetInitVal        findtrack.o
+    0x00002f1c   0x00002f1c   0x00000078   Code   RO          268    i.SpeedGet          encoder.o
+    0x00002f94   0x00002f94   0x00000028   Code   RO           17    i.Start             system_mk66.o
+    0x00002fbc   0x00002fbc   0x00000010   Code   RO          889    i.UART0_RX_TX_IRQHandler  isr.o
+    0x00002fcc   0x00002fcc   0x0000001c   Code   RO          890    i.UART3_RX_TX_IRQHandler  isr.o
+    0x00002fe8   0x00002fe8   0x00000010   Code   RO          891    i.UART4_RX_TX_IRQHandler  isr.o
+    0x00002ff8   0x00002ff8   0x00000058   Code   RO          493    i.VSYNC             mt9v032.o
+    0x00003050   0x00003050   0x0000000e   Code   RO         1490    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0000305e   0x0000305e   0x00000002   Code   RO         1491    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00003060   0x00003060   0x0000000e   Code   RO         1492    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0000306e   0x0000306e   0x00000002   PAD
+    0x00003070   0x00003070   0x00000040   Code   RO          740    i.binImage          image_process.o
+    0x000030b0   0x000030b0   0x0000000e   Code   RO          349    i.buzzer_Init       buzzer.o
+    0x000030be   0x000030be   0x00000002   PAD
+    0x000030c0   0x000030c0   0x0000001c   Code   RO          350    i.buzzer_Ring       buzzer.o
+    0x000030dc   0x000030dc   0x000000cc   Code   RO          494    i.camera_init       mt9v032.o
+    0x000031a8   0x000031a8   0x00000040   Code   RO          299    i.car_communication_init  smartcar_init.o
+    0x000031e8   0x000031e8   0x000001bc   Code   RO          300    i.car_init          smartcar_init.o
+    0x000033a4   0x000033a4   0x0000004c   Code   RO          301    i.car_interrupt_init  smartcar_init.o
+    0x000033f0   0x000033f0   0x00000184   Code   RO          590    i.dis_mybmp         oled.o
+    0x00003574   0x00003574   0x000000d4   Code   RO          844    i.distance          hc_sr04.o
+    0x00003648   0x00003648   0x00000180   Code   RO          845    i.distanceControl   hc_sr04.o
+    0x000037c8   0x000037c8   0x0000004c   Code   RO           18    i.div_set           system_mk66.o
+    0x00003814   0x00003814   0x000001a4   Code   RO         1014    i.dma_portx2buff_init  dma.o
+    0x000039b8   0x000039b8   0x00000160   Code   RO         1016    i.dma_portx2buff_init_new2  dma.o
+    0x00003b18   0x00003b18   0x00000008   Code   RO          808    i.findTrack         findtrack.o
+    0x00003b20   0x00003b20   0x00000068   Code   RO         1095    i.ftm_pwm_duty      ftm.o
+    0x00003b88   0x00003b88   0x0000011c   Code   RO         1097    i.ftm_pwm_init      ftm.o
+    0x00003ca4   0x00003ca4   0x00000074   Code   RO          988    i.get_clk           common.o
+    0x00003d18   0x00003d18   0x0000006c   Code   RO          495    i.get_config        mt9v032.o
+    0x00003d84   0x00003d84   0x00000168   Code   RO         1171    i.gpio_init         gpio.o
+    0x00003eec   0x00003eec   0x00000048   Code   RO         1172    i.gpio_set          gpio.o
+    0x00003f34   0x00003f34   0x0000000c   Code   RO          741    i.imageProcess      image_process.o
+    0x00003f40   0x00003f40   0x00000254   Code   RO          955    i.main              main.o
+    0x00004194   0x00004194   0x00000038   Code   RO          302    i.motorSet          smartcar_init.o
+    0x000041cc   0x000041cc   0x00000050   Code   RO          497    i.mt9v032_cof_uart_interrupt  mt9v032.o
+    0x0000421c   0x0000421c   0x00000080   Code   RO         1216    i.pit_delay         pit.o
+    0x0000429c   0x0000429c   0x0000005c   Code   RO         1217    i.pit_init          pit.o
+    0x000042f8   0x000042f8   0x00000054   Code   RO         1218    i.pit_time_get      pit.o
+    0x0000434c   0x0000434c   0x0000005c   Code   RO         1219    i.pit_time_start    pit.o
+    0x000043a8   0x000043a8   0x00000074   Code   RO         1259    i.port_init         port.o
+    0x0000441c   0x0000441c   0x00000054   Code   RO         1260    i.port_init_NoAlt   port.o
+    0x00004470   0x00004470   0x0000000c   Code   RO          498    i.row_finished      mt9v032.o
+    0x0000447c   0x0000447c   0x000001b8   Code   RO          218    i.servoControl      servo.o
+    0x00004634   0x00004634   0x0000002c   Code   RO         1287    i.systick_delay     systick.o
+    0x00004660   0x00004660   0x00000024   Code   RO         1288    i.systick_delay_ms  systick.o
+    0x00004684   0x00004684   0x00000024   Code   RO         1328    i.uart_getchar      uart.o
+    0x000046a8   0x000046a8   0x000001d8   Code   RO         1329    i.uart_init         uart.o
+    0x00004880   0x00004880   0x0000001e   Code   RO         1330    i.uart_putbuff      uart.o
+    0x0000489e   0x0000489e   0x00000002   PAD
+    0x000048a0   0x000048a0   0x00000020   Code   RO         1331    i.uart_putchar      uart.o
+    0x000048c0   0x000048c0   0x0000002c   Code   RO         1335    i.uart_rx_irq_en    uart.o
+    0x000048ec   0x000048ec   0x0000000a   Data   RO          414    .constdata          nrf2401.o
+    0x000048f6   0x000048f6   0x00000818   Data   RO          591    .constdata          oled.o
+    0x0000510e   0x0000510e   0x00000002   PAD
+    0x00005110   0x00005110   0x00000010   Data   RO         1101    .constdata          ftm.o
+    0x00005120   0x00005120   0x00000028   Data   RO         1174    .constdata          gpio.o
+    0x00005148   0x00005148   0x00000028   Data   RO         1261    .constdata          port.o
+    0x00005170   0x00005170   0x00000020   Data   RO         1488    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x00005190, Size: 0x00008a00, Max: 0x00030000, ABSOLUTE, COMPRESSED[0x00000084])
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   COMPRESSED   0x00000018   Data   RW          102    .data               motor.o
+    0x20000018   COMPRESSED   0x00000130   Data   RW          219    .data               servo.o
+    0x20000148   COMPRESSED   0x0000000b   Data   RW          269    .data               encoder.o
+    0x20000153   COMPRESSED   0x00000001   PAD
+    0x20000154   COMPRESSED   0x0000001e   Data   RW          304    .data               smartcar_init.o
+    0x20000172   COMPRESSED   0x0000004d   Data   RW          503    .data               mt9v032.o
+    0x200001bf   COMPRESSED   0x00000001   PAD
+    0x200001c0   COMPRESSED   0x00000020   Data   RW          694    .data               tracktype.o
+    0x200001e0   COMPRESSED   0x00000002   Data   RW          743    .data               image_process.o
+    0x200001e2   COMPRESSED   0x00000002   PAD
+    0x200001e4   COMPRESSED   0x00000010   Data   RW          810    .data               findtrack.o
+    0x200001f4   COMPRESSED   0x00000026   Data   RW          846    .data               hc_sr04.o
+    0x2000021a   COMPRESSED   0x00000002   PAD
+    0x2000021c   COMPRESSED   0x0000000c   Data   RW          892    .data               isr.o
+    0x20000228   COMPRESSED   0x0000000b   Data   RW          957    .data               main.o
+    0x20000233   COMPRESSED   0x00000001   PAD
+    0x20000234   COMPRESSED   0x0000000c   Data   RW          989    .data               common.o
+    0x20000240   COMPRESSED   0x00000001   Data   RW         1050    .data               dmacnt.o
+    0x20000241   COMPRESSED   0x00000001   PAD
+    0x20000242   COMPRESSED   0x00000006   Data   RW         1102    .data               ftm.o
+    0x20000248   COMPRESSED   0x00000014   Data   RW         1338    .data               uart.o
+    0x2000025c        -       0x00000040   Zero   RW          303    .bss                smartcar_init.o
+    0x2000029c        -       0x00000060   Zero   RW          413    .bss                nrf2401.o
+    0x200002fc        -       0x00002f00   Zero   RW          502    .bss                mt9v032.o
+    0x200031fc        -       0x00003000   Zero   RW          742    .bss                image_process.o
+    0x200061fc        -       0x00000400   Zero   RW          809    .bss                findtrack.o
+    0x200065fc        -       0x00002000   Zero   RW          956    .bss                main.o
+    0x200085fc   COMPRESSED   0x00000004   PAD
+    0x20008600        -       0x00000400   Zero   RW            1    STACK               startup_mk66f18.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+        42          6          0          0          0        996   buzzer.o
+       116         22          0         12          0       2840   common.o
+       218          6          0          0          0       1350   control.o
+       772         44          0          0          0       2113   dma.o
+       166         24          0          1          0      27405   dmacnt.o
+       160         26          0         11          0       1401   encoder.o
+      2380        126          0         16       1024       3607   findtrack.o
+       656         34         16          6          0       2922   ftm.o
+       432         20         40          0          0       1847   gpio.o
+       620        114          0         38          0       2404   hc_sr04.o
+       684         32          0          2      12288       3348   image_process.o
+       552         94          0         12          0       4980   isr.o
+       276          6          0          0          0       1199   key.o
+       620         64          0         11       8192      27083   main.o
+       400         86          0         24          0       7383   motor.o
+       514         76          0         77      12032       6657   mt9v032.o
+       610         62         10          0         96      31259   nrf2401.o
+      1416         18       2072          0          0       9118   oled.o
+       396         44          0          0          0       2271   pit.o
+       200         22         40          0          0       1758   port.o
+       744        108          0        304          0       2796   servo.o
+       640        124          0         30         64      28141   smartcar_init.o
+        56         24       1024          0       1024       1144   startup_mk66f18.o
+       328         34          0          0          0     730264   system_mk66.o
+        80          4          0          0          0       1111   systick.o
+      2264        158          0         32          0       5521   tracktype.o
+       636         42          0         20          0       4177   uart.o
+
+    ----------------------------------------------------------------------
+     15988       1420       3236        604      34724     915095   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        10          0          2          8          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+        86          0          0          0          0          0   __dczerorl2.o
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+         0          0          0          0          0          0   iusefp.o
+        30          0          0          0          0         68   llshl.o
+        36          0          0          0          0         68   llsshr.o
+        32          0          0          0          0         68   llushr.o
+        36          0          0          0          0         68   memcpya.o
+        56          0          0          0          0         88   d2f.o
+       334          0          0          0          0        148   dadd.o
+       222          0          0          0          0        100   ddiv.o
+       186          0          0          0          0        176   depilogue.o
+        62          0          0          0          0         80   dfixi.o
+        50          0          0          0          0         76   dfixui.o
+        34          0          0          0          0         76   dflti.o
+        26          0          0          0          0         76   dfltui.o
+       228          0          0          0          0         96   dmul.o
+        38          0          0          0          0         68   f2d.o
+       110          0          0          0          0        168   fepilogue.o
+
+    ----------------------------------------------------------------------
+      1656         16          0          0          0       1492   Library Totals
+         4          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       306         16          0          0          0        340   mc_w.l
+      1346          0          0          0          0       1152   mf_w.l
+
+    ----------------------------------------------------------------------
+      1656         16          0          0          0       1492   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     17644       1436       3236        604      34724     906895   Grand Totals
+     17644       1436       3236        132      34724     906895   ELF Image Totals (compressed)
+     17644       1436       3236        132          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                20880 (  20.39kB)
+    Total RW  Size (RW Data + ZI Data)             35328 (  34.50kB)
+    Total ROM Size (Code + RO Data + RW Data)      21012 (  20.52kB)
+
+==============================================================================
+

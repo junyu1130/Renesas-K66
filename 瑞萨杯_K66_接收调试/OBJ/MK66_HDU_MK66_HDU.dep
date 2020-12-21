@@ -1,0 +1,374 @@
+Dependencies for Project 'MK66_HDU', Target 'MK66_HDU': (DO NOT MODIFY !)
+CompilerVersion: 5060750::V5.06 update 6 (build 750)::ARMCC
+F (..\SRC\STARTUP\DeviceSupport\MDK-ARM\startup_MK66F18.s)(0x59C31DC8)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_MK66_HDU-I"D:\Program Files (x86)\MDK5\MDK5\ARM\PACK\Keil\Kinetis_K60_DFP\1.5.0\Device\Include"-I"D:\Program Files (x86)\MDK5\MDK5\ARM\CMSIS\Include"--pd "__UVISION_VERSION SETA 529" --pd "MK66FX1M0xxx18 SETA 1"--list .\listings\startup_mk66f18.lst --xref -o ..\obj\startup_mk66f18.o --depend ..\obj\startup_mk66f18.d)
+F (..\SRC\STARTUP\DeviceSupport\system_MK66.c)(0x5F165DB0)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\SRC\HARDWARE\inc -I ..\SRC\SMARTCAR\inc -I ..\SRC\STARTUP\CoreSupport -I ..\SRC\STARTUP\DeviceSupport -I ..\SRC\STARTUP\DeviceSupport\MDK-ARM -I ..\SRC\USER\inc-I.\RTE\_MK66_HDU-I"D:\Program Files (x86)\MDK5\MDK5\ARM\PACK\Keil\Kinetis_K60_DFP\1.5.0\Device\Include"-I"D:\Program Files (x86)\MDK5\MDK5\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DMK66FX1M0xxx18-o ..\obj\system_mk66.o --omf_browse ..\obj\system_mk66.crf --depend ..\obj\system_mk66.d)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\SRC\HARDWARE\inc\common.h)(0x5A05B51E)
+I (..\SRC\STARTUP\DeviceSupport\MK66F18.h)(0x5A940B0F)
+I (..\SRC\STARTUP\CoreSupport\core_cm4.h)(0x56D153A9)
+I (..\SRC\STARTUP\CoreSupport\core_cmInstr.h)(0x56CE7EFD)
+I (..\SRC\STARTUP\CoreSupport\core_cmFunc.h)(0x56CE7F0D)
+I (..\SRC\STARTUP\CoreSupport\core_cm4_simd.h)(0x56CE7F95)
+I (..\SRC\STARTUP\DeviceSupport\system_MK66.h)(0x5A94F31C)
+I (..\SRC\HARDWARE\inc\uart.h)(0x5A05BA9D)
+I (..\SRC\HARDWARE\inc\misc.h)(0x59C2397F)
+I (..\SRC\HARDWARE\inc\port.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\gpio.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\port_cfg.h)(0x5A9B6532)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+F (..\SRC\SMARTCAR\src\smartcar_init.c)(0x5F4A4274)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\SRC\HARDWARE\inc -I ..\SRC\SMARTCAR\inc -I ..\SRC\STARTUP\CoreSupport -I ..\SRC\STARTUP\DeviceSupport -I ..\SRC\STARTUP\DeviceSupport\MDK-ARM -I ..\SRC\USER\inc-I.\RTE\_MK66_HDU-I"D:\Program Files (x86)\MDK5\MDK5\ARM\PACK\Keil\Kinetis_K60_DFP\1.5.0\Device\Include"-I"D:\Program Files (x86)\MDK5\MDK5\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DMK66FX1M0xxx18-o ..\obj\smartcar_init.o --omf_browse ..\obj\smartcar_init.crf --depend ..\obj\smartcar_init.d)
+I (..\SRC\SMARTCAR\inc\smartcar_init.h)(0x5F423E46)
+I (..\SRC\USER\inc\headfile.h)(0x5F423E91)
+I (..\SRC\HARDWARE\inc\port_cfg.h)(0x5A9B6532)
+I (..\SRC\HARDWARE\inc\common.h)(0x5A05B51E)
+I (..\SRC\STARTUP\DeviceSupport\MK66F18.h)(0x5A940B0F)
+I (..\SRC\STARTUP\CoreSupport\core_cm4.h)(0x56D153A9)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\SRC\STARTUP\CoreSupport\core_cmInstr.h)(0x56CE7EFD)
+I (..\SRC\STARTUP\CoreSupport\core_cmFunc.h)(0x56CE7F0D)
+I (..\SRC\STARTUP\CoreSupport\core_cm4_simd.h)(0x56CE7F95)
+I (..\SRC\STARTUP\DeviceSupport\system_MK66.h)(0x5A94F31C)
+I (..\SRC\HARDWARE\inc\uart.h)(0x5A05BA9D)
+I (..\SRC\HARDWARE\inc\misc.h)(0x59C2397F)
+I (..\SRC\HARDWARE\inc\port.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\gpio.h)(0x5A05B543)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (..\SRC\HARDWARE\inc\systick.h)(0x5A05B542)
+I (..\SRC\HARDWARE\inc\pit.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\ftm.h)(0x5A0972DD)
+I (..\SRC\HARDWARE\inc\dma.h)(0x5A94F549)
+I (..\SRC\USER\inc\isr.h)(0x5F110901)
+I (..\SRC\SMARTCAR\inc\buzzer.h)(0x5F10F4A4)
+I (..\SRC\SMARTCAR\inc\key.h)(0x5F12B538)
+I (..\SRC\SMARTCAR\inc\nrf2401.h)(0x5F3A81FD)
+I (..\SRC\HARDWARE\inc\oled.h)(0x5F165F0C)
+F (..\SRC\SMARTCAR\src\buzzer.c)(0x5F10F4D9)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\SRC\HARDWARE\inc -I ..\SRC\SMARTCAR\inc -I ..\SRC\STARTUP\CoreSupport -I ..\SRC\STARTUP\DeviceSupport -I ..\SRC\STARTUP\DeviceSupport\MDK-ARM -I ..\SRC\USER\inc-I.\RTE\_MK66_HDU-I"D:\Program Files (x86)\MDK5\MDK5\ARM\PACK\Keil\Kinetis_K60_DFP\1.5.0\Device\Include"-I"D:\Program Files (x86)\MDK5\MDK5\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DMK66FX1M0xxx18-o ..\obj\buzzer.o --omf_browse ..\obj\buzzer.crf --depend ..\obj\buzzer.d)
+I (..\SRC\USER\inc\headfile.h)(0x5F423E91)
+I (..\SRC\HARDWARE\inc\port_cfg.h)(0x5A9B6532)
+I (..\SRC\HARDWARE\inc\common.h)(0x5A05B51E)
+I (..\SRC\STARTUP\DeviceSupport\MK66F18.h)(0x5A940B0F)
+I (..\SRC\STARTUP\CoreSupport\core_cm4.h)(0x56D153A9)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\SRC\STARTUP\CoreSupport\core_cmInstr.h)(0x56CE7EFD)
+I (..\SRC\STARTUP\CoreSupport\core_cmFunc.h)(0x56CE7F0D)
+I (..\SRC\STARTUP\CoreSupport\core_cm4_simd.h)(0x56CE7F95)
+I (..\SRC\STARTUP\DeviceSupport\system_MK66.h)(0x5A94F31C)
+I (..\SRC\HARDWARE\inc\uart.h)(0x5A05BA9D)
+I (..\SRC\HARDWARE\inc\misc.h)(0x59C2397F)
+I (..\SRC\HARDWARE\inc\port.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\gpio.h)(0x5A05B543)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (..\SRC\HARDWARE\inc\systick.h)(0x5A05B542)
+I (..\SRC\HARDWARE\inc\pit.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\ftm.h)(0x5A0972DD)
+I (..\SRC\HARDWARE\inc\dma.h)(0x5A94F549)
+I (..\SRC\USER\inc\isr.h)(0x5F110901)
+I (..\SRC\SMARTCAR\inc\smartcar_init.h)(0x5F423E46)
+I (..\SRC\SMARTCAR\inc\buzzer.h)(0x5F10F4A4)
+I (..\SRC\SMARTCAR\inc\key.h)(0x5F12B538)
+I (..\SRC\SMARTCAR\inc\nrf2401.h)(0x5F3A81FD)
+I (..\SRC\HARDWARE\inc\oled.h)(0x5F165F0C)
+F (..\SRC\SMARTCAR\src\key.c)(0x5F3A9051)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\SRC\HARDWARE\inc -I ..\SRC\SMARTCAR\inc -I ..\SRC\STARTUP\CoreSupport -I ..\SRC\STARTUP\DeviceSupport -I ..\SRC\STARTUP\DeviceSupport\MDK-ARM -I ..\SRC\USER\inc-I.\RTE\_MK66_HDU-I"D:\Program Files (x86)\MDK5\MDK5\ARM\PACK\Keil\Kinetis_K60_DFP\1.5.0\Device\Include"-I"D:\Program Files (x86)\MDK5\MDK5\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DMK66FX1M0xxx18-o ..\obj\key.o --omf_browse ..\obj\key.crf --depend ..\obj\key.d)
+I (..\SRC\USER\inc\headfile.h)(0x5F423E91)
+I (..\SRC\HARDWARE\inc\port_cfg.h)(0x5A9B6532)
+I (..\SRC\HARDWARE\inc\common.h)(0x5A05B51E)
+I (..\SRC\STARTUP\DeviceSupport\MK66F18.h)(0x5A940B0F)
+I (..\SRC\STARTUP\CoreSupport\core_cm4.h)(0x56D153A9)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\SRC\STARTUP\CoreSupport\core_cmInstr.h)(0x56CE7EFD)
+I (..\SRC\STARTUP\CoreSupport\core_cmFunc.h)(0x56CE7F0D)
+I (..\SRC\STARTUP\CoreSupport\core_cm4_simd.h)(0x56CE7F95)
+I (..\SRC\STARTUP\DeviceSupport\system_MK66.h)(0x5A94F31C)
+I (..\SRC\HARDWARE\inc\uart.h)(0x5A05BA9D)
+I (..\SRC\HARDWARE\inc\misc.h)(0x59C2397F)
+I (..\SRC\HARDWARE\inc\port.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\gpio.h)(0x5A05B543)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (..\SRC\HARDWARE\inc\systick.h)(0x5A05B542)
+I (..\SRC\HARDWARE\inc\pit.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\ftm.h)(0x5A0972DD)
+I (..\SRC\HARDWARE\inc\dma.h)(0x5A94F549)
+I (..\SRC\USER\inc\isr.h)(0x5F110901)
+I (..\SRC\SMARTCAR\inc\smartcar_init.h)(0x5F423E46)
+I (..\SRC\SMARTCAR\inc\buzzer.h)(0x5F10F4A4)
+I (..\SRC\SMARTCAR\inc\key.h)(0x5F12B538)
+I (..\SRC\SMARTCAR\inc\nrf2401.h)(0x5F3A81FD)
+I (..\SRC\HARDWARE\inc\oled.h)(0x5F165F0C)
+F (..\SRC\SMARTCAR\src\nrf2401.c)(0x5F4CA8ED)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\SRC\HARDWARE\inc -I ..\SRC\SMARTCAR\inc -I ..\SRC\STARTUP\CoreSupport -I ..\SRC\STARTUP\DeviceSupport -I ..\SRC\STARTUP\DeviceSupport\MDK-ARM -I ..\SRC\USER\inc-I.\RTE\_MK66_HDU-I"D:\Program Files (x86)\MDK5\MDK5\ARM\PACK\Keil\Kinetis_K60_DFP\1.5.0\Device\Include"-I"D:\Program Files (x86)\MDK5\MDK5\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DMK66FX1M0xxx18-o ..\obj\nrf2401.o --omf_browse ..\obj\nrf2401.crf --depend ..\obj\nrf2401.d)
+I (..\SRC\SMARTCAR\inc\nrf2401.h)(0x5F3A81FD)
+I (..\SRC\USER\inc\headfile.h)(0x5F423E91)
+I (..\SRC\HARDWARE\inc\port_cfg.h)(0x5A9B6532)
+I (..\SRC\HARDWARE\inc\common.h)(0x5A05B51E)
+I (..\SRC\STARTUP\DeviceSupport\MK66F18.h)(0x5A940B0F)
+I (..\SRC\STARTUP\CoreSupport\core_cm4.h)(0x56D153A9)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\SRC\STARTUP\CoreSupport\core_cmInstr.h)(0x56CE7EFD)
+I (..\SRC\STARTUP\CoreSupport\core_cmFunc.h)(0x56CE7F0D)
+I (..\SRC\STARTUP\CoreSupport\core_cm4_simd.h)(0x56CE7F95)
+I (..\SRC\STARTUP\DeviceSupport\system_MK66.h)(0x5A94F31C)
+I (..\SRC\HARDWARE\inc\uart.h)(0x5A05BA9D)
+I (..\SRC\HARDWARE\inc\misc.h)(0x59C2397F)
+I (..\SRC\HARDWARE\inc\port.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\gpio.h)(0x5A05B543)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (..\SRC\HARDWARE\inc\systick.h)(0x5A05B542)
+I (..\SRC\HARDWARE\inc\pit.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\ftm.h)(0x5A0972DD)
+I (..\SRC\HARDWARE\inc\dma.h)(0x5A94F549)
+I (..\SRC\USER\inc\isr.h)(0x5F110901)
+I (..\SRC\SMARTCAR\inc\smartcar_init.h)(0x5F423E46)
+I (..\SRC\SMARTCAR\inc\buzzer.h)(0x5F10F4A4)
+I (..\SRC\SMARTCAR\inc\key.h)(0x5F12B538)
+I (..\SRC\HARDWARE\inc\oled.h)(0x5F165F0C)
+F (..\SRC\SMARTCAR\src\oled.c)(0x5F167816)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\SRC\HARDWARE\inc -I ..\SRC\SMARTCAR\inc -I ..\SRC\STARTUP\CoreSupport -I ..\SRC\STARTUP\DeviceSupport -I ..\SRC\STARTUP\DeviceSupport\MDK-ARM -I ..\SRC\USER\inc-I.\RTE\_MK66_HDU-I"D:\Program Files (x86)\MDK5\MDK5\ARM\PACK\Keil\Kinetis_K60_DFP\1.5.0\Device\Include"-I"D:\Program Files (x86)\MDK5\MDK5\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DMK66FX1M0xxx18-o ..\obj\oled.o --omf_browse ..\obj\oled.crf --depend ..\obj\oled.d)
+I (..\SRC\HARDWARE\inc\oled.h)(0x5F165F0C)
+I (..\SRC\USER\inc\headfile.h)(0x5F423E91)
+I (..\SRC\HARDWARE\inc\port_cfg.h)(0x5A9B6532)
+I (..\SRC\HARDWARE\inc\common.h)(0x5A05B51E)
+I (..\SRC\STARTUP\DeviceSupport\MK66F18.h)(0x5A940B0F)
+I (..\SRC\STARTUP\CoreSupport\core_cm4.h)(0x56D153A9)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\SRC\STARTUP\CoreSupport\core_cmInstr.h)(0x56CE7EFD)
+I (..\SRC\STARTUP\CoreSupport\core_cmFunc.h)(0x56CE7F0D)
+I (..\SRC\STARTUP\CoreSupport\core_cm4_simd.h)(0x56CE7F95)
+I (..\SRC\STARTUP\DeviceSupport\system_MK66.h)(0x5A94F31C)
+I (..\SRC\HARDWARE\inc\uart.h)(0x5A05BA9D)
+I (..\SRC\HARDWARE\inc\misc.h)(0x59C2397F)
+I (..\SRC\HARDWARE\inc\port.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\gpio.h)(0x5A05B543)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (..\SRC\HARDWARE\inc\systick.h)(0x5A05B542)
+I (..\SRC\HARDWARE\inc\pit.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\ftm.h)(0x5A0972DD)
+I (..\SRC\HARDWARE\inc\dma.h)(0x5A94F549)
+I (..\SRC\USER\inc\isr.h)(0x5F110901)
+I (..\SRC\SMARTCAR\inc\smartcar_init.h)(0x5F423E46)
+I (..\SRC\SMARTCAR\inc\buzzer.h)(0x5F10F4A4)
+I (..\SRC\SMARTCAR\inc\key.h)(0x5F12B538)
+I (..\SRC\SMARTCAR\inc\nrf2401.h)(0x5F3A81FD)
+F (..\SRC\USER\src\isr.c)(0x5F54E5D0)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\SRC\HARDWARE\inc -I ..\SRC\SMARTCAR\inc -I ..\SRC\STARTUP\CoreSupport -I ..\SRC\STARTUP\DeviceSupport -I ..\SRC\STARTUP\DeviceSupport\MDK-ARM -I ..\SRC\USER\inc-I.\RTE\_MK66_HDU-I"D:\Program Files (x86)\MDK5\MDK5\ARM\PACK\Keil\Kinetis_K60_DFP\1.5.0\Device\Include"-I"D:\Program Files (x86)\MDK5\MDK5\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DMK66FX1M0xxx18-o ..\obj\isr.o --omf_browse ..\obj\isr.crf --depend ..\obj\isr.d)
+I (..\SRC\USER\inc\isr.h)(0x5F110901)
+I (..\SRC\USER\inc\headfile.h)(0x5F423E91)
+I (..\SRC\HARDWARE\inc\port_cfg.h)(0x5A9B6532)
+I (..\SRC\HARDWARE\inc\common.h)(0x5A05B51E)
+I (..\SRC\STARTUP\DeviceSupport\MK66F18.h)(0x5A940B0F)
+I (..\SRC\STARTUP\CoreSupport\core_cm4.h)(0x56D153A9)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\SRC\STARTUP\CoreSupport\core_cmInstr.h)(0x56CE7EFD)
+I (..\SRC\STARTUP\CoreSupport\core_cmFunc.h)(0x56CE7F0D)
+I (..\SRC\STARTUP\CoreSupport\core_cm4_simd.h)(0x56CE7F95)
+I (..\SRC\STARTUP\DeviceSupport\system_MK66.h)(0x5A94F31C)
+I (..\SRC\HARDWARE\inc\uart.h)(0x5A05BA9D)
+I (..\SRC\HARDWARE\inc\misc.h)(0x59C2397F)
+I (..\SRC\HARDWARE\inc\port.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\gpio.h)(0x5A05B543)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (..\SRC\HARDWARE\inc\systick.h)(0x5A05B542)
+I (..\SRC\HARDWARE\inc\pit.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\ftm.h)(0x5A0972DD)
+I (..\SRC\HARDWARE\inc\dma.h)(0x5A94F549)
+I (..\SRC\SMARTCAR\inc\smartcar_init.h)(0x5F423E46)
+I (..\SRC\SMARTCAR\inc\buzzer.h)(0x5F10F4A4)
+I (..\SRC\SMARTCAR\inc\key.h)(0x5F12B538)
+I (..\SRC\SMARTCAR\inc\nrf2401.h)(0x5F3A81FD)
+I (..\SRC\HARDWARE\inc\oled.h)(0x5F165F0C)
+F (..\SRC\USER\src\main.c)(0x5F5CBAFF)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\SRC\HARDWARE\inc -I ..\SRC\SMARTCAR\inc -I ..\SRC\STARTUP\CoreSupport -I ..\SRC\STARTUP\DeviceSupport -I ..\SRC\STARTUP\DeviceSupport\MDK-ARM -I ..\SRC\USER\inc-I.\RTE\_MK66_HDU-I"D:\Program Files (x86)\MDK5\MDK5\ARM\PACK\Keil\Kinetis_K60_DFP\1.5.0\Device\Include"-I"D:\Program Files (x86)\MDK5\MDK5\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DMK66FX1M0xxx18-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
+I (..\SRC\USER\inc\headfile.h)(0x5F423E91)
+I (..\SRC\HARDWARE\inc\port_cfg.h)(0x5A9B6532)
+I (..\SRC\HARDWARE\inc\common.h)(0x5A05B51E)
+I (..\SRC\STARTUP\DeviceSupport\MK66F18.h)(0x5A940B0F)
+I (..\SRC\STARTUP\CoreSupport\core_cm4.h)(0x56D153A9)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\SRC\STARTUP\CoreSupport\core_cmInstr.h)(0x56CE7EFD)
+I (..\SRC\STARTUP\CoreSupport\core_cmFunc.h)(0x56CE7F0D)
+I (..\SRC\STARTUP\CoreSupport\core_cm4_simd.h)(0x56CE7F95)
+I (..\SRC\STARTUP\DeviceSupport\system_MK66.h)(0x5A94F31C)
+I (..\SRC\HARDWARE\inc\uart.h)(0x5A05BA9D)
+I (..\SRC\HARDWARE\inc\misc.h)(0x59C2397F)
+I (..\SRC\HARDWARE\inc\port.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\gpio.h)(0x5A05B543)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (..\SRC\HARDWARE\inc\systick.h)(0x5A05B542)
+I (..\SRC\HARDWARE\inc\pit.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\ftm.h)(0x5A0972DD)
+I (..\SRC\HARDWARE\inc\dma.h)(0x5A94F549)
+I (..\SRC\USER\inc\isr.h)(0x5F110901)
+I (..\SRC\SMARTCAR\inc\smartcar_init.h)(0x5F423E46)
+I (..\SRC\SMARTCAR\inc\buzzer.h)(0x5F10F4A4)
+I (..\SRC\SMARTCAR\inc\key.h)(0x5F12B538)
+I (..\SRC\SMARTCAR\inc\nrf2401.h)(0x5F3A81FD)
+I (..\SRC\HARDWARE\inc\oled.h)(0x5F165F0C)
+F (..\SRC\HARDWARE\src\common.c)(0x5A93C08A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\SRC\HARDWARE\inc -I ..\SRC\SMARTCAR\inc -I ..\SRC\STARTUP\CoreSupport -I ..\SRC\STARTUP\DeviceSupport -I ..\SRC\STARTUP\DeviceSupport\MDK-ARM -I ..\SRC\USER\inc-I.\RTE\_MK66_HDU-I"D:\Program Files (x86)\MDK5\MDK5\ARM\PACK\Keil\Kinetis_K60_DFP\1.5.0\Device\Include"-I"D:\Program Files (x86)\MDK5\MDK5\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DMK66FX1M0xxx18-o ..\obj\common.o --omf_browse ..\obj\common.crf --depend ..\obj\common.d)
+I (..\SRC\HARDWARE\inc\common.h)(0x5A05B51E)
+I (..\SRC\STARTUP\DeviceSupport\MK66F18.h)(0x5A940B0F)
+I (..\SRC\STARTUP\CoreSupport\core_cm4.h)(0x56D153A9)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\SRC\STARTUP\CoreSupport\core_cmInstr.h)(0x56CE7EFD)
+I (..\SRC\STARTUP\CoreSupport\core_cmFunc.h)(0x56CE7F0D)
+I (..\SRC\STARTUP\CoreSupport\core_cm4_simd.h)(0x56CE7F95)
+I (..\SRC\STARTUP\DeviceSupport\system_MK66.h)(0x5A94F31C)
+I (..\SRC\HARDWARE\inc\uart.h)(0x5A05BA9D)
+I (..\SRC\HARDWARE\inc\misc.h)(0x59C2397F)
+I (..\SRC\HARDWARE\inc\port.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\gpio.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\port_cfg.h)(0x5A9B6532)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+F (..\SRC\HARDWARE\src\dma.c)(0x5A94FB29)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\SRC\HARDWARE\inc -I ..\SRC\SMARTCAR\inc -I ..\SRC\STARTUP\CoreSupport -I ..\SRC\STARTUP\DeviceSupport -I ..\SRC\STARTUP\DeviceSupport\MDK-ARM -I ..\SRC\USER\inc-I.\RTE\_MK66_HDU-I"D:\Program Files (x86)\MDK5\MDK5\ARM\PACK\Keil\Kinetis_K60_DFP\1.5.0\Device\Include"-I"D:\Program Files (x86)\MDK5\MDK5\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DMK66FX1M0xxx18-o ..\obj\dma.o --omf_browse ..\obj\dma.crf --depend ..\obj\dma.d)
+I (..\SRC\HARDWARE\inc\dma.h)(0x5A94F549)
+I (..\SRC\HARDWARE\inc\misc.h)(0x59C2397F)
+I (..\SRC\HARDWARE\inc\common.h)(0x5A05B51E)
+I (..\SRC\STARTUP\DeviceSupport\MK66F18.h)(0x5A940B0F)
+I (..\SRC\STARTUP\CoreSupport\core_cm4.h)(0x56D153A9)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\SRC\STARTUP\CoreSupport\core_cmInstr.h)(0x56CE7EFD)
+I (..\SRC\STARTUP\CoreSupport\core_cmFunc.h)(0x56CE7F0D)
+I (..\SRC\STARTUP\CoreSupport\core_cm4_simd.h)(0x56CE7F95)
+I (..\SRC\STARTUP\DeviceSupport\system_MK66.h)(0x5A94F31C)
+I (..\SRC\HARDWARE\inc\uart.h)(0x5A05BA9D)
+I (..\SRC\HARDWARE\inc\port.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\gpio.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\port_cfg.h)(0x5A9B6532)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+F (..\SRC\HARDWARE\src\dmacnt.c)(0x5F13DC66)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\SRC\HARDWARE\inc -I ..\SRC\SMARTCAR\inc -I ..\SRC\STARTUP\CoreSupport -I ..\SRC\STARTUP\DeviceSupport -I ..\SRC\STARTUP\DeviceSupport\MDK-ARM -I ..\SRC\USER\inc-I.\RTE\_MK66_HDU-I"D:\Program Files (x86)\MDK5\MDK5\ARM\PACK\Keil\Kinetis_K60_DFP\1.5.0\Device\Include"-I"D:\Program Files (x86)\MDK5\MDK5\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DMK66FX1M0xxx18-o ..\obj\dmacnt.o --omf_browse ..\obj\dmacnt.crf --depend ..\obj\dmacnt.d)
+I (..\SRC\HARDWARE\inc\dmacnt.h)(0x5A94FBCC)
+I (..\SRC\USER\inc\headfile.h)(0x5F423E91)
+I (..\SRC\HARDWARE\inc\port_cfg.h)(0x5A9B6532)
+I (..\SRC\HARDWARE\inc\common.h)(0x5A05B51E)
+I (..\SRC\STARTUP\DeviceSupport\MK66F18.h)(0x5A940B0F)
+I (..\SRC\STARTUP\CoreSupport\core_cm4.h)(0x56D153A9)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\SRC\STARTUP\CoreSupport\core_cmInstr.h)(0x56CE7EFD)
+I (..\SRC\STARTUP\CoreSupport\core_cmFunc.h)(0x56CE7F0D)
+I (..\SRC\STARTUP\CoreSupport\core_cm4_simd.h)(0x56CE7F95)
+I (..\SRC\STARTUP\DeviceSupport\system_MK66.h)(0x5A94F31C)
+I (..\SRC\HARDWARE\inc\uart.h)(0x5A05BA9D)
+I (..\SRC\HARDWARE\inc\misc.h)(0x59C2397F)
+I (..\SRC\HARDWARE\inc\port.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\gpio.h)(0x5A05B543)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (..\SRC\HARDWARE\inc\systick.h)(0x5A05B542)
+I (..\SRC\HARDWARE\inc\pit.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\ftm.h)(0x5A0972DD)
+I (..\SRC\HARDWARE\inc\dma.h)(0x5A94F549)
+I (..\SRC\USER\inc\isr.h)(0x5F110901)
+I (..\SRC\SMARTCAR\inc\smartcar_init.h)(0x5F423E46)
+I (..\SRC\SMARTCAR\inc\buzzer.h)(0x5F10F4A4)
+I (..\SRC\SMARTCAR\inc\key.h)(0x5F12B538)
+I (..\SRC\SMARTCAR\inc\nrf2401.h)(0x5F3A81FD)
+I (..\SRC\HARDWARE\inc\oled.h)(0x5F165F0C)
+F (..\SRC\HARDWARE\src\ftm.c)(0x5A05B542)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\SRC\HARDWARE\inc -I ..\SRC\SMARTCAR\inc -I ..\SRC\STARTUP\CoreSupport -I ..\SRC\STARTUP\DeviceSupport -I ..\SRC\STARTUP\DeviceSupport\MDK-ARM -I ..\SRC\USER\inc-I.\RTE\_MK66_HDU-I"D:\Program Files (x86)\MDK5\MDK5\ARM\PACK\Keil\Kinetis_K60_DFP\1.5.0\Device\Include"-I"D:\Program Files (x86)\MDK5\MDK5\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DMK66FX1M0xxx18-o ..\obj\ftm.o --omf_browse ..\obj\ftm.crf --depend ..\obj\ftm.d)
+I (..\SRC\HARDWARE\inc\ftm.h)(0x5A0972DD)
+I (..\SRC\HARDWARE\inc\misc.h)(0x59C2397F)
+I (..\SRC\HARDWARE\inc\common.h)(0x5A05B51E)
+I (..\SRC\STARTUP\DeviceSupport\MK66F18.h)(0x5A940B0F)
+I (..\SRC\STARTUP\CoreSupport\core_cm4.h)(0x56D153A9)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\SRC\STARTUP\CoreSupport\core_cmInstr.h)(0x56CE7EFD)
+I (..\SRC\STARTUP\CoreSupport\core_cmFunc.h)(0x56CE7F0D)
+I (..\SRC\STARTUP\CoreSupport\core_cm4_simd.h)(0x56CE7F95)
+I (..\SRC\STARTUP\DeviceSupport\system_MK66.h)(0x5A94F31C)
+I (..\SRC\HARDWARE\inc\uart.h)(0x5A05BA9D)
+I (..\SRC\HARDWARE\inc\port.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\gpio.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\port_cfg.h)(0x5A9B6532)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+F (..\SRC\HARDWARE\src\gpio.c)(0x5A94CC1D)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\SRC\HARDWARE\inc -I ..\SRC\SMARTCAR\inc -I ..\SRC\STARTUP\CoreSupport -I ..\SRC\STARTUP\DeviceSupport -I ..\SRC\STARTUP\DeviceSupport\MDK-ARM -I ..\SRC\USER\inc-I.\RTE\_MK66_HDU-I"D:\Program Files (x86)\MDK5\MDK5\ARM\PACK\Keil\Kinetis_K60_DFP\1.5.0\Device\Include"-I"D:\Program Files (x86)\MDK5\MDK5\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DMK66FX1M0xxx18-o ..\obj\gpio.o --omf_browse ..\obj\gpio.crf --depend ..\obj\gpio.d)
+I (..\SRC\HARDWARE\inc\gpio.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\common.h)(0x5A05B51E)
+I (..\SRC\STARTUP\DeviceSupport\MK66F18.h)(0x5A940B0F)
+I (..\SRC\STARTUP\CoreSupport\core_cm4.h)(0x56D153A9)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\SRC\STARTUP\CoreSupport\core_cmInstr.h)(0x56CE7EFD)
+I (..\SRC\STARTUP\CoreSupport\core_cmFunc.h)(0x56CE7F0D)
+I (..\SRC\STARTUP\CoreSupport\core_cm4_simd.h)(0x56CE7F95)
+I (..\SRC\STARTUP\DeviceSupport\system_MK66.h)(0x5A94F31C)
+I (..\SRC\HARDWARE\inc\uart.h)(0x5A05BA9D)
+I (..\SRC\HARDWARE\inc\misc.h)(0x59C2397F)
+I (..\SRC\HARDWARE\inc\port.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\port_cfg.h)(0x5A9B6532)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+F (..\SRC\HARDWARE\src\pit.c)(0x5A05B542)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\SRC\HARDWARE\inc -I ..\SRC\SMARTCAR\inc -I ..\SRC\STARTUP\CoreSupport -I ..\SRC\STARTUP\DeviceSupport -I ..\SRC\STARTUP\DeviceSupport\MDK-ARM -I ..\SRC\USER\inc-I.\RTE\_MK66_HDU-I"D:\Program Files (x86)\MDK5\MDK5\ARM\PACK\Keil\Kinetis_K60_DFP\1.5.0\Device\Include"-I"D:\Program Files (x86)\MDK5\MDK5\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DMK66FX1M0xxx18-o ..\obj\pit.o --omf_browse ..\obj\pit.crf --depend ..\obj\pit.d)
+I (..\SRC\HARDWARE\inc\pit.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\misc.h)(0x59C2397F)
+I (..\SRC\HARDWARE\inc\common.h)(0x5A05B51E)
+I (..\SRC\STARTUP\DeviceSupport\MK66F18.h)(0x5A940B0F)
+I (..\SRC\STARTUP\CoreSupport\core_cm4.h)(0x56D153A9)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\SRC\STARTUP\CoreSupport\core_cmInstr.h)(0x56CE7EFD)
+I (..\SRC\STARTUP\CoreSupport\core_cmFunc.h)(0x56CE7F0D)
+I (..\SRC\STARTUP\CoreSupport\core_cm4_simd.h)(0x56CE7F95)
+I (..\SRC\STARTUP\DeviceSupport\system_MK66.h)(0x5A94F31C)
+I (..\SRC\HARDWARE\inc\uart.h)(0x5A05BA9D)
+I (..\SRC\HARDWARE\inc\port.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\gpio.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\port_cfg.h)(0x5A9B6532)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+F (..\SRC\HARDWARE\src\port.c)(0x5A05B542)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\SRC\HARDWARE\inc -I ..\SRC\SMARTCAR\inc -I ..\SRC\STARTUP\CoreSupport -I ..\SRC\STARTUP\DeviceSupport -I ..\SRC\STARTUP\DeviceSupport\MDK-ARM -I ..\SRC\USER\inc-I.\RTE\_MK66_HDU-I"D:\Program Files (x86)\MDK5\MDK5\ARM\PACK\Keil\Kinetis_K60_DFP\1.5.0\Device\Include"-I"D:\Program Files (x86)\MDK5\MDK5\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DMK66FX1M0xxx18-o ..\obj\port.o --omf_browse ..\obj\port.crf --depend ..\obj\port.d)
+I (..\SRC\HARDWARE\inc\port.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\common.h)(0x5A05B51E)
+I (..\SRC\STARTUP\DeviceSupport\MK66F18.h)(0x5A940B0F)
+I (..\SRC\STARTUP\CoreSupport\core_cm4.h)(0x56D153A9)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\SRC\STARTUP\CoreSupport\core_cmInstr.h)(0x56CE7EFD)
+I (..\SRC\STARTUP\CoreSupport\core_cmFunc.h)(0x56CE7F0D)
+I (..\SRC\STARTUP\CoreSupport\core_cm4_simd.h)(0x56CE7F95)
+I (..\SRC\STARTUP\DeviceSupport\system_MK66.h)(0x5A94F31C)
+I (..\SRC\HARDWARE\inc\uart.h)(0x5A05BA9D)
+I (..\SRC\HARDWARE\inc\misc.h)(0x59C2397F)
+I (..\SRC\HARDWARE\inc\gpio.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\port_cfg.h)(0x5A9B6532)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+F (..\SRC\HARDWARE\src\systick.c)(0x5A05B542)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\SRC\HARDWARE\inc -I ..\SRC\SMARTCAR\inc -I ..\SRC\STARTUP\CoreSupport -I ..\SRC\STARTUP\DeviceSupport -I ..\SRC\STARTUP\DeviceSupport\MDK-ARM -I ..\SRC\USER\inc-I.\RTE\_MK66_HDU-I"D:\Program Files (x86)\MDK5\MDK5\ARM\PACK\Keil\Kinetis_K60_DFP\1.5.0\Device\Include"-I"D:\Program Files (x86)\MDK5\MDK5\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DMK66FX1M0xxx18-o ..\obj\systick.o --omf_browse ..\obj\systick.crf --depend ..\obj\systick.d)
+I (..\SRC\HARDWARE\inc\systick.h)(0x5A05B542)
+I (..\SRC\HARDWARE\inc\gpio.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\common.h)(0x5A05B51E)
+I (..\SRC\STARTUP\DeviceSupport\MK66F18.h)(0x5A940B0F)
+I (..\SRC\STARTUP\CoreSupport\core_cm4.h)(0x56D153A9)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\SRC\STARTUP\CoreSupport\core_cmInstr.h)(0x56CE7EFD)
+I (..\SRC\STARTUP\CoreSupport\core_cmFunc.h)(0x56CE7F0D)
+I (..\SRC\STARTUP\CoreSupport\core_cm4_simd.h)(0x56CE7F95)
+I (..\SRC\STARTUP\DeviceSupport\system_MK66.h)(0x5A94F31C)
+I (..\SRC\HARDWARE\inc\uart.h)(0x5A05BA9D)
+I (..\SRC\HARDWARE\inc\misc.h)(0x59C2397F)
+I (..\SRC\HARDWARE\inc\port.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\port_cfg.h)(0x5A9B6532)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+F (..\SRC\HARDWARE\src\uart.c)(0x5F14F1B9)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\SRC\HARDWARE\inc -I ..\SRC\SMARTCAR\inc -I ..\SRC\STARTUP\CoreSupport -I ..\SRC\STARTUP\DeviceSupport -I ..\SRC\STARTUP\DeviceSupport\MDK-ARM -I ..\SRC\USER\inc-I.\RTE\_MK66_HDU-I"D:\Program Files (x86)\MDK5\MDK5\ARM\PACK\Keil\Kinetis_K60_DFP\1.5.0\Device\Include"-I"D:\Program Files (x86)\MDK5\MDK5\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DMK66FX1M0xxx18-o ..\obj\uart.o --omf_browse ..\obj\uart.crf --depend ..\obj\uart.d)
+I (..\SRC\HARDWARE\inc\uart.h)(0x5A05BA9D)
+I (..\SRC\HARDWARE\inc\misc.h)(0x59C2397F)
+I (..\SRC\HARDWARE\inc\common.h)(0x5A05B51E)
+I (..\SRC\STARTUP\DeviceSupport\MK66F18.h)(0x5A940B0F)
+I (..\SRC\STARTUP\CoreSupport\core_cm4.h)(0x56D153A9)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\SRC\STARTUP\CoreSupport\core_cmInstr.h)(0x56CE7EFD)
+I (..\SRC\STARTUP\CoreSupport\core_cmFunc.h)(0x56CE7F0D)
+I (..\SRC\STARTUP\CoreSupport\core_cm4_simd.h)(0x56CE7F95)
+I (..\SRC\STARTUP\DeviceSupport\system_MK66.h)(0x5A94F31C)
+I (..\SRC\HARDWARE\inc\port.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\gpio.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\port_cfg.h)(0x5A9B6532)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+F (..\SRC\HARDWARE\src\misc.c)(0x59C2397F)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\SRC\HARDWARE\inc -I ..\SRC\SMARTCAR\inc -I ..\SRC\STARTUP\CoreSupport -I ..\SRC\STARTUP\DeviceSupport -I ..\SRC\STARTUP\DeviceSupport\MDK-ARM -I ..\SRC\USER\inc-I.\RTE\_MK66_HDU-I"D:\Program Files (x86)\MDK5\MDK5\ARM\PACK\Keil\Kinetis_K60_DFP\1.5.0\Device\Include"-I"D:\Program Files (x86)\MDK5\MDK5\ARM\CMSIS\Include"-D__UVISION_VERSION="529" -DMK66FX1M0xxx18-o ..\obj\misc.o --omf_browse ..\obj\misc.crf --depend ..\obj\misc.d)
+I (..\SRC\HARDWARE\inc\misc.h)(0x59C2397F)
+I (..\SRC\HARDWARE\inc\common.h)(0x5A05B51E)
+I (..\SRC\STARTUP\DeviceSupport\MK66F18.h)(0x5A940B0F)
+I (..\SRC\STARTUP\CoreSupport\core_cm4.h)(0x56D153A9)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\SRC\STARTUP\CoreSupport\core_cmInstr.h)(0x56CE7EFD)
+I (..\SRC\STARTUP\CoreSupport\core_cmFunc.h)(0x56CE7F0D)
+I (..\SRC\STARTUP\CoreSupport\core_cm4_simd.h)(0x56CE7F95)
+I (..\SRC\STARTUP\DeviceSupport\system_MK66.h)(0x5A94F31C)
+I (..\SRC\HARDWARE\inc\uart.h)(0x5A05BA9D)
+I (..\SRC\HARDWARE\inc\port.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\gpio.h)(0x5A05B543)
+I (..\SRC\HARDWARE\inc\port_cfg.h)(0x5A9B6532)
+I (D:\Program Files (x86)\MDK5\MDK5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
